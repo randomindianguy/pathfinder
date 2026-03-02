@@ -1,3 +1,5 @@
+Live Demo: https://sid-pathfinder.vercel.app/
+
 # MEM Pathfinder 🧭
 
 AI-powered course planning for Purdue Master of Engineering Management students.
