@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
+import posthog from "posthog-js";
 import {
   Lightbulb,
   Briefcase,
@@ -49,6 +50,7 @@ export default function Home() {
 
   const handleSelect = (roleId: string) => {
     setLoading(roleId);
+    posthog.capture("role_selected", { role: roleId });
     router.push(`/plan/${roleId}`);
   };
 

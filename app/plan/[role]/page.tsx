@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useParams, useRouter } from "next/navigation";
+import posthog from "posthog-js";
 import {
   ArrowLeft,
   Compass,
@@ -126,6 +127,10 @@ export default function PlanPage() {
         }
         const data = await res.json();
         setPlan(data);
+        posthog.capture("plan_viewed", {
+          role: roleId,
+          courses: data.semesters?.flatMap((s: { courses: { code: string }[] }) => s.courses.map((c: { code: string }) => c.code)),
+        });
       } catch (err) {
         setError(err instanceof Error ? err.message : "Something went wrong");
       }
