@@ -1,0 +1,639 @@
+{
+  "product_manager": {
+    "id": "product_manager",
+    "title": "Product Manager",
+    "description": "Drive product strategy, roadmap, and execution at tech companies",
+    "icon": "Lightbulb",
+    "skill_clusters": [
+      {
+        "name": "User Research & UX",
+        "weight": 0.95,
+        "keywords": [
+          "usability",
+          "user testing",
+          "HCI",
+          "human factors",
+          "cognitive",
+          "user experience",
+          "interaction design"
+        ]
+      },
+      {
+        "name": "Data-Driven Decision Making",
+        "weight": 0.9,
+        "keywords": [
+          "analytics",
+          "statistics",
+          "A/B testing",
+          "data mining",
+          "business analytics",
+          "metrics"
+        ]
+      },
+      {
+        "name": "Strategic Thinking",
+        "weight": 0.85,
+        "keywords": [
+          "strategy",
+          "decision making",
+          "competitive analysis",
+          "market analysis",
+          "business strategy"
+        ]
+      },
+      {
+        "name": "Technical Communication",
+        "weight": 0.8,
+        "keywords": [
+          "project management",
+          "systems thinking",
+          "leadership",
+          "communication",
+          "stakeholder"
+        ]
+      },
+      {
+        "name": "Product Development Process",
+        "weight": 0.75,
+        "keywords": [
+          "product design",
+          "new product development",
+          "prototyping",
+          "innovation",
+          "design thinking"
+        ]
+      },
+      {
+        "name": "Operations & Process",
+        "weight": 0.5,
+        "keywords": [
+          "process design",
+          "quality",
+          "lean",
+          "optimization"
+        ]
+      }
+    ],
+    "must_include": [
+      {
+        "code": "CE 59601",
+        "semester": "Fall 2026",
+        "reason": "Core entrepreneurship and business strategy foundations"
+      },
+      {
+        "code": "CE 59700",
+        "semester": "Spring 2027",
+        "reason": "Innovation frameworks for driving product and socio-technical change"
+      }
+    ],
+    "preferred": [
+      "IE 57700",
+      "IE 55900",
+      "MGMT 522",
+      "MGMT 67000",
+      "MGMT 690",
+      "MGMT 68700",
+      "IE 53300",
+      "IE 58000"
+    ]
+  },
+  "management_consultant": {
+    "id": "management_consultant",
+    "title": "Management Consultant",
+    "description": "Advise organizations on strategy, operations, and transformation",
+    "icon": "Briefcase",
+    "skill_clusters": [
+      {
+        "name": "Strategic Analysis",
+        "weight": 0.95,
+        "keywords": [
+          "strategy",
+          "competitive analysis",
+          "market analysis",
+          "business strategy",
+          "strategic management",
+          "consulting"
+        ]
+      },
+      {
+        "name": "Data & Analytics",
+        "weight": 0.9,
+        "keywords": [
+          "analytics",
+          "data mining",
+          "statistics",
+          "business analytics",
+          "quantitative analysis",
+          "modeling"
+        ]
+      },
+      {
+        "name": "Operations Excellence",
+        "weight": 0.85,
+        "keywords": [
+          "operations management",
+          "process improvement",
+          "lean",
+          "six sigma",
+          "quality",
+          "optimization"
+        ]
+      },
+      {
+        "name": "Communication & Leadership",
+        "weight": 0.85,
+        "keywords": [
+          "leadership",
+          "communication",
+          "presentation",
+          "storytelling",
+          "persuasion",
+          "stakeholder"
+        ]
+      },
+      {
+        "name": "Financial Acumen",
+        "weight": 0.8,
+        "keywords": [
+          "financial analysis",
+          "economic analysis",
+          "accounting",
+          "cost-benefit",
+          "valuation"
+        ]
+      },
+      {
+        "name": "Systems Thinking",
+        "weight": 0.7,
+        "keywords": [
+          "systems analysis",
+          "systems thinking",
+          "complex systems",
+          "modeling",
+          "simulation"
+        ]
+      }
+    ],
+    "must_include": [],
+    "preferred": []
+  },
+  "operations_manager": {
+    "id": "operations_manager",
+    "title": "Operations Manager",
+    "description": "Optimize processes, manage teams, and drive operational efficiency",
+    "icon": "Settings",
+    "skill_clusters": [
+      {
+        "name": "Operations & Process Design",
+        "weight": 0.95,
+        "keywords": [
+          "operations management",
+          "process design",
+          "process improvement",
+          "production management",
+          "manufacturing"
+        ]
+      },
+      {
+        "name": "Quality & Reliability",
+        "weight": 0.9,
+        "keywords": [
+          "quality control",
+          "quality management",
+          "reliability",
+          "six sigma",
+          "lean",
+          "continuous improvement"
+        ]
+      },
+      {
+        "name": "Supply Chain & Logistics",
+        "weight": 0.85,
+        "keywords": [
+          "supply chain",
+          "logistics",
+          "procurement",
+          "sourcing",
+          "inventory",
+          "material handling"
+        ]
+      },
+      {
+        "name": "Leadership & People Management",
+        "weight": 0.85,
+        "keywords": [
+          "leadership",
+          "team management",
+          "job design",
+          "organizational design",
+          "human factors"
+        ]
+      },
+      {
+        "name": "Data & Analytics",
+        "weight": 0.75,
+        "keywords": [
+          "analytics",
+          "statistics",
+          "simulation",
+          "forecasting",
+          "data-driven"
+        ]
+      },
+      {
+        "name": "Financial & Economic Analysis",
+        "weight": 0.7,
+        "keywords": [
+          "economic analysis",
+          "cost analysis",
+          "budgeting",
+          "financial management"
+        ]
+      }
+    ],
+    "must_include": [],
+    "preferred": []
+  },
+  "supply_chain_analyst": {
+    "id": "supply_chain_analyst",
+    "title": "Supply Chain Analyst",
+    "description": "Analyze and optimize end-to-end supply chain performance",
+    "icon": "Truck",
+    "skill_clusters": [
+      {
+        "name": "Supply Chain Management",
+        "weight": 0.95,
+        "keywords": [
+          "supply chain",
+          "logistics",
+          "procurement",
+          "sourcing",
+          "global supply chain",
+          "inventory"
+        ]
+      },
+      {
+        "name": "Operations Research & Optimization",
+        "weight": 0.9,
+        "keywords": [
+          "optimization",
+          "linear programming",
+          "simulation",
+          "operations research",
+          "modeling",
+          "stochastic"
+        ]
+      },
+      {
+        "name": "Data Analytics",
+        "weight": 0.9,
+        "keywords": [
+          "analytics",
+          "data mining",
+          "statistics",
+          "business analytics",
+          "forecasting",
+          "python"
+        ]
+      },
+      {
+        "name": "Operations Management",
+        "weight": 0.85,
+        "keywords": [
+          "operations management",
+          "production management",
+          "manufacturing",
+          "process design",
+          "facilities"
+        ]
+      },
+      {
+        "name": "Financial Analysis",
+        "weight": 0.7,
+        "keywords": [
+          "economic analysis",
+          "cost analysis",
+          "financial analysis"
+        ]
+      },
+      {
+        "name": "Systems & Process",
+        "weight": 0.65,
+        "keywords": [
+          "systems analysis",
+          "quality control",
+          "lean",
+          "process improvement"
+        ]
+      }
+    ],
+    "must_include": [],
+    "preferred": []
+  },
+  "data_analyst": {
+    "id": "data_analyst",
+    "title": "Data Analyst",
+    "description": "Transform data into insights that drive business decisions",
+    "icon": "BarChart3",
+    "skill_clusters": [
+      {
+        "name": "Statistics & Analytics",
+        "weight": 0.95,
+        "keywords": [
+          "statistics",
+          "analytics",
+          "business analytics",
+          "data mining",
+          "statistical analysis",
+          "regression"
+        ]
+      },
+      {
+        "name": "Programming & Tools",
+        "weight": 0.9,
+        "keywords": [
+          "python",
+          "programming",
+          "data management",
+          "machine learning",
+          "computational",
+          "algorithms"
+        ]
+      },
+      {
+        "name": "Data Visualization & Storytelling",
+        "weight": 0.85,
+        "keywords": [
+          "visualization",
+          "storytelling",
+          "communication",
+          "presentation",
+          "dashboard"
+        ]
+      },
+      {
+        "name": "Optimization & Modeling",
+        "weight": 0.8,
+        "keywords": [
+          "optimization",
+          "modeling",
+          "simulation",
+          "operations research",
+          "linear programming"
+        ]
+      },
+      {
+        "name": "Business Acumen",
+        "weight": 0.7,
+        "keywords": [
+          "business strategy",
+          "decision making",
+          "market analysis",
+          "financial analysis"
+        ]
+      },
+      {
+        "name": "Quality & Process",
+        "weight": 0.5,
+        "keywords": [
+          "quality control",
+          "process improvement",
+          "A/B testing"
+        ]
+      }
+    ],
+    "must_include": [],
+    "preferred": []
+  },
+  "technical_program_manager": {
+    "id": "technical_program_manager",
+    "title": "Technical Program Manager",
+    "description": "Coordinate complex engineering programs across teams and systems",
+    "icon": "GitBranch",
+    "skill_clusters": [
+      {
+        "name": "Project & Program Management",
+        "weight": 0.95,
+        "keywords": [
+          "project management",
+          "program management",
+          "scheduling",
+          "planning",
+          "risk management"
+        ]
+      },
+      {
+        "name": "Systems Engineering",
+        "weight": 0.9,
+        "keywords": [
+          "systems engineering",
+          "systems analysis",
+          "systems thinking",
+          "system design",
+          "integration",
+          "architecture"
+        ]
+      },
+      {
+        "name": "Technical Breadth",
+        "weight": 0.85,
+        "keywords": [
+          "engineering",
+          "technical",
+          "software",
+          "hardware",
+          "design",
+          "manufacturing"
+        ]
+      },
+      {
+        "name": "Leadership & Communication",
+        "weight": 0.85,
+        "keywords": [
+          "leadership",
+          "communication",
+          "stakeholder",
+          "cross-functional",
+          "team management"
+        ]
+      },
+      {
+        "name": "Risk & Quality",
+        "weight": 0.75,
+        "keywords": [
+          "risk analysis",
+          "quality",
+          "reliability",
+          "safety",
+          "compliance"
+        ]
+      },
+      {
+        "name": "Process & Operations",
+        "weight": 0.65,
+        "keywords": [
+          "process improvement",
+          "operations",
+          "lean",
+          "agile",
+          "efficiency"
+        ]
+      }
+    ],
+    "must_include": [],
+    "preferred": []
+  },
+  "business_analyst": {
+    "id": "business_analyst",
+    "title": "Business Analyst",
+    "description": "Bridge business needs and technical solutions through requirements and analysis",
+    "icon": "FileSearch",
+    "skill_clusters": [
+      {
+        "name": "Business & Strategic Analysis",
+        "weight": 0.95,
+        "keywords": [
+          "business strategy",
+          "market analysis",
+          "competitive analysis",
+          "requirements",
+          "business process"
+        ]
+      },
+      {
+        "name": "Data & Analytics",
+        "weight": 0.9,
+        "keywords": [
+          "analytics",
+          "data mining",
+          "statistics",
+          "business analytics",
+          "modeling",
+          "quantitative"
+        ]
+      },
+      {
+        "name": "Communication & Documentation",
+        "weight": 0.85,
+        "keywords": [
+          "communication",
+          "documentation",
+          "presentation",
+          "storytelling",
+          "stakeholder management"
+        ]
+      },
+      {
+        "name": "Process Improvement",
+        "weight": 0.8,
+        "keywords": [
+          "process design",
+          "process improvement",
+          "lean",
+          "optimization",
+          "workflow"
+        ]
+      },
+      {
+        "name": "Technical Literacy",
+        "weight": 0.7,
+        "keywords": [
+          "systems",
+          "software",
+          "technology",
+          "technical",
+          "information systems"
+        ]
+      },
+      {
+        "name": "Financial Acumen",
+        "weight": 0.7,
+        "keywords": [
+          "financial analysis",
+          "cost-benefit",
+          "economic analysis",
+          "budgeting"
+        ]
+      }
+    ],
+    "must_include": [],
+    "preferred": []
+  },
+  "strategy_ops": {
+    "id": "strategy_ops",
+    "title": "Strategy & Operations",
+    "description": "Drive strategic initiatives and scale operational processes at high-growth companies",
+    "icon": "Rocket",
+    "skill_clusters": [
+      {
+        "name": "Strategic Thinking",
+        "weight": 0.95,
+        "keywords": [
+          "strategy",
+          "strategic management",
+          "business strategy",
+          "competitive analysis",
+          "market analysis"
+        ]
+      },
+      {
+        "name": "Operations Excellence",
+        "weight": 0.9,
+        "keywords": [
+          "operations management",
+          "process design",
+          "process improvement",
+          "lean",
+          "optimization",
+          "efficiency"
+        ]
+      },
+      {
+        "name": "Data-Driven Decision Making",
+        "weight": 0.9,
+        "keywords": [
+          "analytics",
+          "data mining",
+          "business analytics",
+          "metrics",
+          "KPIs",
+          "modeling"
+        ]
+      },
+      {
+        "name": "Leadership & Collaboration",
+        "weight": 0.8,
+        "keywords": [
+          "leadership",
+          "cross-functional",
+          "stakeholder",
+          "team management",
+          "communication"
+        ]
+      },
+      {
+        "name": "Financial & Economic Analysis",
+        "weight": 0.8,
+        "keywords": [
+          "financial analysis",
+          "economic analysis",
+          "cost-benefit",
+          "business case"
+        ]
+      },
+      {
+        "name": "Innovation & Entrepreneurship",
+        "weight": 0.65,
+        "keywords": [
+          "innovation",
+          "entrepreneurship",
+          "startup",
+          "product development",
+          "design thinking"
+        ]
+      }
+    ],
+    "must_include": [],
+    "preferred": []
+  }
+}

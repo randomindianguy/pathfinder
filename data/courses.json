@@ -1,0 +1,1287 @@
+[
+  {
+    "code": "IE 52500",
+    "title": "Healthcare Delivery Systems",
+    "department": "IE",
+    "credits": 3,
+    "categories": [
+      "systems",
+      "engineering_depth_IE"
+    ],
+    "description": "Analysis and design of healthcare delivery systems using industrial engineering methods. Topics include patient flow, capacity planning, scheduling, quality improvement, and simulation in healthcare settings.",
+    "semesters_offered": [
+      "Fall",
+      "Spring"
+    ],
+    "catalog_url": "https://catalog.purdue.edu/preview_course_nopop.php?catoid=17&coid=203227",
+    "boilerclasses_url": "https://boilerclasses.com/detail/IE52500HealthcareDeliverySystems",
+    "professors": {}
+  },
+  {
+    "code": "IE 53000",
+    "title": "Quality Control",
+    "department": "IE",
+    "credits": 3,
+    "categories": [
+      "systems",
+      "engineering_depth_IE"
+    ],
+    "description": "Statistical methods for quality control and improvement. Topics include control charts, acceptance sampling, process capability, design of experiments, and Six Sigma methodology.",
+    "semesters_offered": [
+      "Fall",
+      "Spring"
+    ],
+    "catalog_url": "https://catalog.purdue.edu/preview_course_nopop.php?catoid=17&coid=202247",
+    "boilerclasses_url": "https://boilerclasses.com/detail/IE53000QualityControl",
+    "professors": {}
+  },
+  {
+    "code": "IE 53200",
+    "title": "Reliability",
+    "department": "IE",
+    "credits": 3,
+    "categories": [
+      "systems",
+      "engineering_depth_IE"
+    ],
+    "description": "Fundamentals of reliability engineering. Topics include failure distributions, reliability modeling, system reliability, maintainability, and life testing methods.",
+    "semesters_offered": [
+      "Fall"
+    ],
+    "catalog_url": "https://catalog.purdue.edu/preview_course_nopop.php?catoid=17&coid=202248",
+    "boilerclasses_url": "https://boilerclasses.com/detail/IE53200Reliability",
+    "professors": {}
+  },
+  {
+    "code": "IE 53300",
+    "title": "Industrial Applications of Statistics",
+    "department": "IE",
+    "credits": 3,
+    "categories": [
+      "systems",
+      "engineering_depth_IE"
+    ],
+    "description": "Applied statistical methods for industrial engineering problems. Topics include regression analysis, design of experiments, ANOVA, and response surface methodology.",
+    "semesters_offered": [
+      "Fall",
+      "Spring"
+    ],
+    "catalog_url": "https://catalog.purdue.edu/preview_course_nopop.php?catoid=17&coid=202249",
+    "boilerclasses_url": "https://boilerclasses.com/detail/IE53300IndustrialApplicationsOfStatistics",
+    "professors": {}
+  },
+  {
+    "code": "IE 53500",
+    "title": "Linear Programming",
+    "department": "IE",
+    "credits": 3,
+    "categories": [
+      "systems",
+      "engineering_depth_IE"
+    ],
+    "description": "Theory and methods of linear programming. Topics include simplex method, duality theory, sensitivity analysis, and applications in operations research.",
+    "semesters_offered": [
+      "Fall",
+      "Spring"
+    ],
+    "catalog_url": "https://catalog.purdue.edu/preview_course_nopop.php?catoid=17&coid=202250",
+    "boilerclasses_url": "https://boilerclasses.com/detail/IE53500LinearProgramming",
+    "professors": {}
+  },
+  {
+    "code": "IE 53600",
+    "title": "Stochastic Models in Operations Research I",
+    "department": "IE",
+    "credits": 3,
+    "categories": [
+      "engineering_depth_IE"
+    ],
+    "description": "Introduction to stochastic models including Markov chains, queuing theory, and stochastic processes with applications in operations research and engineering.",
+    "semesters_offered": [
+      "Fall"
+    ],
+    "catalog_url": "https://catalog.purdue.edu/preview_course_nopop.php?catoid=17&coid=202251",
+    "boilerclasses_url": "https://boilerclasses.com/detail/IE53600StochasticModelsInOperationsResearchI",
+    "professors": {}
+  },
+  {
+    "code": "IE 54500",
+    "title": "Engineering Economic Analysis",
+    "department": "IE",
+    "credits": 3,
+    "categories": [
+      "systems",
+      "engineering_depth_IE"
+    ],
+    "description": "Economic analysis methods for engineering decisions. Topics include time value of money, cost estimation, depreciation, replacement analysis, and benefit-cost analysis.",
+    "semesters_offered": [
+      "Fall",
+      "Spring"
+    ],
+    "catalog_url": "https://catalog.purdue.edu/preview_course_nopop.php?catoid=17&coid=202254",
+    "boilerclasses_url": "https://boilerclasses.com/detail/IE54500EngineeringEconomicAnalysis",
+    "professors": {}
+  },
+  {
+    "code": "IE 54600",
+    "title": "Economic Decisions in Engineering",
+    "department": "IE",
+    "credits": 3,
+    "categories": [
+      "systems",
+      "engineering_depth_IE"
+    ],
+    "description": "Advanced topics in engineering economy including decision analysis under uncertainty, risk analysis, real options, and multi-criteria decision making.",
+    "semesters_offered": [
+      "Spring"
+    ],
+    "catalog_url": "https://catalog.purdue.edu/preview_course_nopop.php?catoid=17&coid=202255",
+    "boilerclasses_url": "https://boilerclasses.com/detail/IE54600EconomicDecisionsInEngineering",
+    "professors": {}
+  },
+  {
+    "code": "IE 55600",
+    "title": "Job Design",
+    "department": "IE",
+    "credits": 3,
+    "categories": [
+      "systems",
+      "engineering_depth_IE"
+    ],
+    "description": "Principles of job and work design. Topics include work measurement, time study, methods engineering, workplace layout, and ergonomic considerations in job design.",
+    "semesters_offered": [
+      "Spring"
+    ],
+    "catalog_url": "https://catalog.purdue.edu/preview_course_nopop.php?catoid=17&coid=202256",
+    "boilerclasses_url": "https://boilerclasses.com/detail/IE55600JobDesign",
+    "professors": {}
+  },
+  {
+    "code": "IE 55800",
+    "title": "Safety Engineering",
+    "department": "IE",
+    "credits": 3,
+    "categories": [
+      "systems",
+      "engineering_depth_IE"
+    ],
+    "description": "Principles and methods of safety engineering. Topics include hazard identification, risk assessment, safety management systems, accident investigation, and regulatory compliance.",
+    "semesters_offered": [
+      "Fall"
+    ],
+    "catalog_url": "https://catalog.purdue.edu/preview_course_nopop.php?catoid=17&coid=202257",
+    "boilerclasses_url": "https://boilerclasses.com/detail/IE55800SafetyEngineering",
+    "professors": {}
+  },
+  {
+    "code": "IE 55900",
+    "title": "Cognitive Engineering of Interactive Software",
+    "department": "IE",
+    "credits": 3,
+    "categories": [
+      "systems",
+      "engineering_depth_IE"
+    ],
+    "description": "Design and evaluation of interactive software systems from a cognitive engineering perspective. Topics include mental models, information processing, interface design principles, usability testing, and user-centered design methods.",
+    "semesters_offered": [
+      "Spring"
+    ],
+    "catalog_url": "https://catalog.purdue.edu/preview_course_nopop.php?catoid=17&coid=202258",
+    "boilerclasses_url": "https://boilerclasses.com/detail/IE55900CognitiveEngineeringOfInteractiveSoftware",
+    "professors": {}
+  },
+  {
+    "code": "IE 56100",
+    "title": "Introduction to Convex Optimization",
+    "department": "IE",
+    "credits": 3,
+    "categories": [
+      "systems",
+      "engineering_depth_IE"
+    ],
+    "description": "Convex optimization theory and algorithms. Topics include convex sets and functions, optimization problems, duality, interior-point methods, and applications in engineering.",
+    "semesters_offered": [
+      "Fall"
+    ],
+    "catalog_url": "https://catalog.purdue.edu/preview_course_nopop.php?catoid=17&coid=203760",
+    "boilerclasses_url": "https://boilerclasses.com/detail/IE56100IntroductionToConvexOptimization",
+    "professors": {}
+  },
+  {
+    "code": "IE 56600",
+    "title": "Production Management Control",
+    "department": "IE",
+    "credits": 3,
+    "categories": [
+      "systems",
+      "engineering_depth_IE"
+    ],
+    "description": "Methods for production planning, scheduling, and inventory control. Topics include MRP, capacity planning, shop floor control, and just-in-time systems.",
+    "semesters_offered": [
+      "Fall"
+    ],
+    "catalog_url": "https://catalog.purdue.edu/preview_course_nopop.php?catoid=17&coid=202259",
+    "boilerclasses_url": "https://boilerclasses.com/detail/IE56600ProductionManagementControl",
+    "professors": {}
+  },
+  {
+    "code": "IE 57000",
+    "title": "Manufacturing Process Engineering",
+    "department": "IE",
+    "credits": 3,
+    "categories": [
+      "systems",
+      "engineering_depth_IE"
+    ],
+    "description": "Engineering analysis of manufacturing processes. Topics include process selection, process planning, machining, forming, joining, and advanced manufacturing technologies.",
+    "semesters_offered": [
+      "Spring"
+    ],
+    "catalog_url": "https://catalog.purdue.edu/preview_course_nopop.php?catoid=17&coid=202260",
+    "boilerclasses_url": "https://boilerclasses.com/detail/IE57000ManufacturingProcessEngineering",
+    "professors": {}
+  },
+  {
+    "code": "IE 57700",
+    "title": "Human Factors in Engineering",
+    "department": "IE",
+    "credits": 3,
+    "categories": [
+      "systems",
+      "engineering_depth_IE"
+    ],
+    "description": "Principles of human factors engineering. Topics include human capabilities and limitations, human-machine interaction, display and control design, workplace design, usability evaluation, and human error analysis.",
+    "semesters_offered": [
+      "Fall",
+      "Spring"
+    ],
+    "catalog_url": "https://catalog.purdue.edu/preview_course_nopop.php?catoid=17&coid=206633",
+    "boilerclasses_url": "https://boilerclasses.com/detail/IE57700HumanFactorsInEngineering",
+    "professors": {}
+  },
+  {
+    "code": "IE 57800",
+    "title": "Applied Ergonomics",
+    "department": "IE",
+    "credits": 3,
+    "categories": [
+      "systems",
+      "engineering_depth_IE"
+    ],
+    "description": "Applied methods in ergonomics and human factors. Topics include physical ergonomics, biomechanics, anthropometry, work physiology, and ergonomic assessment tools.",
+    "semesters_offered": [
+      "Spring"
+    ],
+    "catalog_url": "https://catalog.purdue.edu/preview_course_nopop.php?catoid=17&coid=204110",
+    "boilerclasses_url": "https://boilerclasses.com/detail/IE57800AppliedErgonomics",
+    "professors": {}
+  },
+  {
+    "code": "IE 57900",
+    "title": "Design and Control of Production and Manufacturing Systems",
+    "department": "IE",
+    "credits": 3,
+    "categories": [
+      "systems",
+      "engineering_depth_IE"
+    ],
+    "description": "Design, analysis, and control of production systems. Topics include facility layout, material flow, production scheduling, and system performance analysis.",
+    "semesters_offered": [
+      "Fall"
+    ],
+    "catalog_url": "https://catalog.purdue.edu/preview_course_nopop.php?catoid=17&coid=202263",
+    "boilerclasses_url": "https://boilerclasses.com/detail/IE57900DesignAndControlOfProductionAndManufacturingSystems",
+    "professors": {}
+  },
+  {
+    "code": "IE 58000",
+    "title": "Systems Simulation",
+    "department": "IE",
+    "credits": 3,
+    "categories": [
+      "systems",
+      "engineering_depth_IE"
+    ],
+    "description": "Discrete-event simulation modeling and analysis. Topics include simulation methodology, random number generation, input modeling, output analysis, and simulation software.",
+    "semesters_offered": [
+      "Fall",
+      "Spring"
+    ],
+    "catalog_url": "https://catalog.purdue.edu/preview_course_nopop.php?catoid=17&coid=202264",
+    "boilerclasses_url": "https://boilerclasses.com/detail/IE58000SystemsSimulation",
+    "professors": {}
+  },
+  {
+    "code": "IE 58200",
+    "title": "Advanced Facilities Design",
+    "department": "IE",
+    "credits": 3,
+    "categories": [
+      "systems",
+      "engineering_depth_IE"
+    ],
+    "description": "Advanced topics in facilities planning and design. Topics include layout optimization, material handling system design, warehouse design, and computer-aided facilities planning.",
+    "semesters_offered": [
+      "Spring"
+    ],
+    "catalog_url": "https://catalog.purdue.edu/preview_course_nopop.php?catoid=17&coid=202266",
+    "boilerclasses_url": "https://boilerclasses.com/detail/IE58200AdvancedFacilitiesDesign",
+    "professors": {}
+  },
+  {
+    "code": "IE 58800",
+    "title": "e-Work and e-Service",
+    "department": "IE",
+    "credits": 3,
+    "categories": [
+      "systems",
+      "engineering_depth_IE"
+    ],
+    "description": "Design and management of electronic work and service systems. Topics include distributed work, collaboration technologies, service engineering, and digital transformation.",
+    "semesters_offered": [
+      "Spring"
+    ],
+    "catalog_url": "https://catalog.purdue.edu/preview_course_nopop.php?catoid=17&coid=202268",
+    "boilerclasses_url": "https://boilerclasses.com/detail/IE58800EWorkAndEService",
+    "professors": {}
+  },
+  {
+    "code": "IE 59000",
+    "title": "Project Management",
+    "department": "IE",
+    "credits": 3,
+    "categories": [
+      "systems",
+      "engineering_depth_IE"
+    ],
+    "description": "Principles and methods of project management. Topics include project planning, scheduling, resource allocation, risk management, earned value management, and agile methodologies.",
+    "semesters_offered": [
+      "Fall",
+      "Spring"
+    ],
+    "catalog_url": "https://catalog.purdue.edu/preview_course_nopop.php?catoid=17&coid=202269",
+    "boilerclasses_url": "https://boilerclasses.com/detail/IE59000ProjectManagement",
+    "professors": {}
+  },
+  {
+    "code": "IE 59000-RiskAnalysis",
+    "title": "Risk Analysis Methods and Applications",
+    "department": "IE",
+    "credits": 3,
+    "categories": [
+      "systems",
+      "engineering_depth_IE"
+    ],
+    "description": "Methods for risk analysis and decision making under uncertainty. Topics include probabilistic risk assessment, decision trees, Monte Carlo simulation, and risk communication.",
+    "semesters_offered": [
+      "Fall"
+    ],
+    "catalog_url": "https://catalog.purdue.edu/preview_course_nopop.php?catoid=17&coid=202269",
+    "boilerclasses_url": "https://boilerclasses.com/detail/IE59000RiskAnalysisMethodsAndApplications",
+    "professors": {}
+  },
+  {
+    "code": "IE 59000-SupplyChain",
+    "title": "Supply Chain Engineering & Analytics",
+    "department": "IE",
+    "credits": 3,
+    "categories": [
+      "systems",
+      "engineering_depth_IE"
+    ],
+    "description": "Engineering and analytical approaches to supply chain design and management. Topics include network design, inventory optimization, demand forecasting, and supply chain analytics.",
+    "semesters_offered": [
+      "Spring"
+    ],
+    "catalog_url": "https://catalog.purdue.edu/preview_course_nopop.php?catoid=17&coid=202269",
+    "boilerclasses_url": "https://boilerclasses.com/detail/IE59000SupplyChainEngineeringAnalytics",
+    "professors": {}
+  },
+  {
+    "code": "IE 59000-QualitySystems",
+    "title": "Quality Systems Management",
+    "department": "IE",
+    "credits": 3,
+    "categories": [
+      "systems",
+      "engineering_depth_IE"
+    ],
+    "description": "Management of quality systems including ISO standards, total quality management, quality auditing, and continuous improvement frameworks.",
+    "semesters_offered": [
+      "Fall"
+    ],
+    "catalog_url": "https://catalog.purdue.edu/preview_course_nopop.php?catoid=17&coid=202269",
+    "boilerclasses_url": "https://boilerclasses.com/detail/IE59000QualitySystemsManagement",
+    "professors": {}
+  },
+  {
+    "code": "IE 59000-MachineLearning",
+    "title": "Machine Learning and its Applications",
+    "department": "IE",
+    "credits": 3,
+    "categories": [
+      "engineering_depth_IE"
+    ],
+    "description": "Introduction to machine learning with applications in industrial engineering. Topics include supervised and unsupervised learning, neural networks, and practical applications.",
+    "semesters_offered": [
+      "Fall"
+    ],
+    "catalog_url": "https://catalog.purdue.edu/preview_course_nopop.php?catoid=17&coid=202269",
+    "boilerclasses_url": "https://boilerclasses.com/detail/IE59000MachineLearningAndItsApplications",
+    "professors": {}
+  },
+  {
+    "code": "ECE 50024",
+    "title": "Machine Learning",
+    "department": "ECE",
+    "credits": 3,
+    "categories": [
+      "systems",
+      "engineering_depth_ECE"
+    ],
+    "description": "Fundamentals of machine learning including supervised learning, unsupervised learning, deep learning, and reinforcement learning with engineering applications.",
+    "semesters_offered": [
+      "Fall",
+      "Spring"
+    ],
+    "catalog_url": "https://catalog.purdue.edu/preview_course_nopop.php?catoid=17&coid=204847",
+    "boilerclasses_url": "https://boilerclasses.com/detail/ECE50024MachineLearning",
+    "professors": {}
+  },
+  {
+    "code": "ECE 50863",
+    "title": "Computer Network Systems",
+    "department": "ECE",
+    "credits": 3,
+    "categories": [
+      "systems",
+      "engineering_depth_ECE"
+    ],
+    "description": "Principles of computer networking. Topics include network architecture, protocols, routing, security, and performance analysis.",
+    "semesters_offered": [
+      "Fall",
+      "Spring"
+    ],
+    "catalog_url": "https://catalog.purdue.edu/preview_course_nopop.php?catoid=17&coid=203053",
+    "boilerclasses_url": "https://boilerclasses.com/detail/ECE50863ComputerNetworkSystems",
+    "professors": {}
+  },
+  {
+    "code": "ECE 56200",
+    "title": "Introduction to Data Management",
+    "department": "ECE",
+    "credits": 3,
+    "categories": [
+      "systems",
+      "engineering_depth_ECE"
+    ],
+    "description": "Fundamentals of data management including database design, SQL, data modeling, data warehousing, and data processing systems.",
+    "semesters_offered": [
+      "Fall"
+    ],
+    "catalog_url": "https://catalog.purdue.edu/preview_course_nopop.php?catoid=17&coid=202049",
+    "boilerclasses_url": "https://boilerclasses.com/detail/ECE56200IntroductionToDataManagement",
+    "professors": {}
+  },
+  {
+    "code": "ECE 56900",
+    "title": "Introduction to Robotic Systems",
+    "department": "ECE",
+    "credits": 3,
+    "categories": [
+      "systems",
+      "engineering_depth_ECE"
+    ],
+    "description": "Fundamentals of robotic systems including kinematics, dynamics, control, sensors, and autonomous systems.",
+    "semesters_offered": [
+      "Fall",
+      "Spring"
+    ],
+    "catalog_url": "https://catalog.purdue.edu/preview_course_nopop.php?catoid=17&coid=202053",
+    "boilerclasses_url": "https://boilerclasses.com/detail/ECE56900IntroductionToRoboticSystems",
+    "professors": {}
+  },
+  {
+    "code": "ECE 57000",
+    "title": "Artificial Intelligence",
+    "department": "ECE",
+    "credits": 3,
+    "categories": [
+      "engineering_depth_ECE"
+    ],
+    "description": "Fundamentals of artificial intelligence including search, knowledge representation, reasoning, planning, and machine learning.",
+    "semesters_offered": [
+      "Fall",
+      "Spring"
+    ],
+    "catalog_url": "https://catalog.purdue.edu/preview_course_nopop.php?catoid=17&coid=202054",
+    "boilerclasses_url": "https://boilerclasses.com/detail/ECE57000ArtificialIntelligence",
+    "professors": {}
+  },
+  {
+    "code": "ECE 50836",
+    "title": "Introduction to Data Mining",
+    "department": "ECE",
+    "credits": 3,
+    "categories": [
+      "engineering_depth_ECE"
+    ],
+    "description": "Principles of data mining including classification, clustering, association rules, anomaly detection, and applications in large-scale data analysis.",
+    "semesters_offered": [
+      "Spring"
+    ],
+    "catalog_url": "https://catalog.purdue.edu/preview_course_nopop.php?catoid=17&coid=206142",
+    "boilerclasses_url": "https://boilerclasses.com/detail/ECE50836IntroductionToDataMining",
+    "professors": {}
+  },
+  {
+    "code": "ME 54100",
+    "title": "Engineering Design: A Decision-Based Perspective",
+    "department": "ME",
+    "credits": 3,
+    "categories": [
+      "systems",
+      "engineering_depth_ME"
+    ],
+    "description": "Engineering design theory and methodology using decision-based framework. Topics include design under uncertainty, multi-objective optimization, utility theory, and decision analysis in engineering design.",
+    "semesters_offered": [
+      "Fall",
+      "Spring"
+    ],
+    "catalog_url": "https://catalog.purdue.edu/preview_course_nopop.php?catoid=17&coid=204574",
+    "boilerclasses_url": "https://boilerclasses.com/detail/ME54100EngineeringDesignADecisionBasedPerspective",
+    "professors": {}
+  },
+  {
+    "code": "ME 55300",
+    "title": "Product and Process Design",
+    "department": "ME",
+    "credits": 3,
+    "categories": [
+      "systems",
+      "engineering_depth_ME"
+    ],
+    "description": "Methodologies for product and process design including concept generation, design for manufacturing, prototyping, and design optimization.",
+    "semesters_offered": [
+      "Spring"
+    ],
+    "catalog_url": "https://catalog.purdue.edu/preview_course_nopop.php?catoid=17&coid=202553",
+    "boilerclasses_url": "https://boilerclasses.com/detail/ME55300ProductAndProcessDesign",
+    "professors": {}
+  },
+  {
+    "code": "ME 55700",
+    "title": "Design for Manufacturability",
+    "department": "ME",
+    "credits": 3,
+    "categories": [
+      "systems",
+      "engineering_depth_ME"
+    ],
+    "description": "Principles and methods for designing products for efficient manufacturing. Topics include DFM guidelines, cost estimation, process selection, and design-process interaction.",
+    "semesters_offered": [
+      "Fall"
+    ],
+    "catalog_url": "https://catalog.purdue.edu/preview_course_nopop.php?catoid=17&coid=202556",
+    "boilerclasses_url": "https://boilerclasses.com/detail/ME55700DesignForManufacturability",
+    "professors": {}
+  },
+  {
+    "code": "ME 57100",
+    "title": "Reliability-Based Design",
+    "department": "ME",
+    "credits": 3,
+    "categories": [
+      "systems",
+      "engineering_depth_ME"
+    ],
+    "description": "Probabilistic methods for engineering design considering reliability. Topics include failure mode analysis, reliability prediction, and robust design.",
+    "semesters_offered": [
+      "Spring"
+    ],
+    "catalog_url": "https://catalog.purdue.edu/preview_course_nopop.php?catoid=17&coid=202563",
+    "boilerclasses_url": "https://boilerclasses.com/detail/ME57100ReliabilityBasedDesign",
+    "professors": {}
+  },
+  {
+    "code": "ME 57500",
+    "title": "Theory and Design of Control Systems",
+    "department": "ME",
+    "credits": 3,
+    "categories": [
+      "systems",
+      "engineering_depth_ME"
+    ],
+    "description": "Theory and design of feedback control systems. Topics include system modeling, stability analysis, controller design, and digital control.",
+    "semesters_offered": [
+      "Fall",
+      "Spring"
+    ],
+    "catalog_url": "https://catalog.purdue.edu/preview_course_nopop.php?catoid=17&coid=202565",
+    "boilerclasses_url": "https://boilerclasses.com/detail/ME57500TheoryAndDesignOfControlSystems",
+    "professors": {}
+  },
+  {
+    "code": "SYS 50000",
+    "title": "Perspectives on Systems",
+    "department": "SYS",
+    "credits": 3,
+    "categories": [
+      "systems"
+    ],
+    "description": "Interdisciplinary perspectives on systems thinking. Explores complex systems concepts, emergence, feedback loops, and systemic approaches to engineering challenges.",
+    "semesters_offered": [
+      "Fall",
+      "Spring"
+    ],
+    "catalog_url": "",
+    "boilerclasses_url": "https://boilerclasses.com/detail/SYS50000PerspectivesOnSystems",
+    "professors": {}
+  },
+  {
+    "code": "SYS 51000",
+    "title": "Tools and Methodologies for Designing Systems",
+    "department": "SYS",
+    "credits": 3,
+    "categories": [
+      "systems"
+    ],
+    "description": "Practical tools and methodologies for systems design including model-based systems engineering, requirements engineering, and systems architecture.",
+    "semesters_offered": [
+      "Fall",
+      "Spring"
+    ],
+    "catalog_url": "",
+    "boilerclasses_url": "https://boilerclasses.com/detail/SYS51000ToolsAndMethodologiesForDesigningSystems",
+    "professors": {}
+  },
+  {
+    "code": "SYS 53000",
+    "title": "Practical Systems Thinking",
+    "department": "SYS",
+    "credits": 3,
+    "categories": [
+      "systems"
+    ],
+    "description": "Applied systems thinking methods for complex problem solving. Topics include causal loop diagrams, system dynamics, stakeholder analysis, and systemic intervention design.",
+    "semesters_offered": [
+      "Fall",
+      "Spring"
+    ],
+    "catalog_url": "",
+    "boilerclasses_url": "https://boilerclasses.com/detail/SYS53000PracticalSystemsThinking",
+    "professors": {}
+  },
+  {
+    "code": "AAE 56000",
+    "title": "System-of-Systems Modeling and Analysis",
+    "department": "AAE",
+    "credits": 3,
+    "categories": [
+      "systems",
+      "engineering_depth_AAE"
+    ],
+    "description": "Modeling and analysis of system-of-systems including architecture frameworks, interoperability, emergence, and large-scale system integration.",
+    "semesters_offered": [
+      "Fall"
+    ],
+    "catalog_url": "https://catalog.purdue.edu/preview_course_nopop.php?catoid=17&coid=201817",
+    "boilerclasses_url": "https://boilerclasses.com/detail/AAE56000SystemofSystemsModelingAndAnalysis",
+    "professors": {}
+  },
+  {
+    "code": "AAE 56400",
+    "title": "Systems Analysis and Synthesis",
+    "department": "AAE",
+    "credits": 3,
+    "categories": [
+      "systems",
+      "engineering_depth_AAE"
+    ],
+    "description": "Systems engineering analysis and synthesis methods. Topics include requirements analysis, functional analysis, trade studies, and system verification and validation.",
+    "semesters_offered": [
+      "Spring"
+    ],
+    "catalog_url": "https://catalog.purdue.edu/preview_course_nopop.php?catoid=17&coid=201818",
+    "boilerclasses_url": "https://boilerclasses.com/detail/AAE56400SystemsAnalysisAndSynthesis",
+    "professors": {}
+  },
+  {
+    "code": "ENGR 59600",
+    "title": "Technical Project Management",
+    "department": "ENGR",
+    "credits": 3,
+    "categories": [
+      "systems"
+    ],
+    "description": "Project management methods for engineering projects. Topics include project planning, scheduling, budgeting, risk management, and team leadership in technical contexts.",
+    "semesters_offered": [
+      "Fall",
+      "Spring"
+    ],
+    "catalog_url": "",
+    "boilerclasses_url": "https://boilerclasses.com/detail/ENGR59600TechnicalProjectManagement",
+    "professors": {}
+  },
+  {
+    "code": "BME 56300",
+    "title": "Quality Systems for Regulatory Compliance",
+    "department": "BME",
+    "credits": 3,
+    "categories": [
+      "systems",
+      "engineering_depth_BME"
+    ],
+    "description": "Quality management systems for regulated industries. Topics include FDA regulations, ISO 13485, design controls, CAPA, and quality system auditing.",
+    "semesters_offered": [
+      "Fall"
+    ],
+    "catalog_url": "https://catalog.purdue.edu/preview_course_nopop.php?catoid=17&coid=203867",
+    "boilerclasses_url": "https://boilerclasses.com/detail/BME56300QualitySystemsForRegulatoryCompliance",
+    "professors": {}
+  },
+  {
+    "code": "MSE 53500",
+    "title": "Lean Manufacturing of Materials",
+    "department": "MSE",
+    "credits": 3,
+    "categories": [
+      "systems",
+      "engineering_depth_MSE"
+    ],
+    "description": "Lean manufacturing principles applied to materials processing. Topics include value stream mapping, waste elimination, continuous flow, pull systems, and kaizen.",
+    "semesters_offered": [
+      "Spring"
+    ],
+    "catalog_url": "https://catalog.purdue.edu/preview_course_nopop.php?catoid=17&coid=206804",
+    "boilerclasses_url": "https://boilerclasses.com/detail/MSE53500LeanManufacturingOfMaterials",
+    "professors": {}
+  },
+  {
+    "code": "CHE 55400",
+    "title": "Smart Manufacturing in Process Industries",
+    "department": "CHE",
+    "credits": 3,
+    "categories": [
+      "systems",
+      "engineering_depth_CHE"
+    ],
+    "description": "Smart manufacturing concepts for process industries. Topics include IoT, digital twins, advanced process control, data analytics, and Industry 4.0.",
+    "semesters_offered": [
+      "Spring"
+    ],
+    "catalog_url": "https://catalog.purdue.edu/preview_course_nopop.php?catoid=17&coid=204594",
+    "boilerclasses_url": "https://boilerclasses.com/detail/CHE55400SmartManufacturingInProcessIndustries",
+    "professors": {}
+  },
+  {
+    "code": "CE 52000",
+    "title": "Construction Project Control Systems",
+    "department": "CE",
+    "credits": 3,
+    "categories": [
+      "systems",
+      "engineering_depth_CE"
+    ],
+    "description": "Methods for planning and controlling construction projects. Topics include scheduling, cost control, resource management, and project performance measurement.",
+    "semesters_offered": [
+      "Fall"
+    ],
+    "catalog_url": "https://catalog.purdue.edu/preview_course_nopop.php?catoid=17&coid=201944",
+    "boilerclasses_url": "https://boilerclasses.com/detail/CE52000ConstructionProjectControlSystems",
+    "professors": {}
+  },
+  {
+    "code": "CE 59601",
+    "title": "Entrepreneurship and Business Strategy in Engineering",
+    "department": "CE",
+    "credits": 3,
+    "categories": [
+      "professional_skills"
+    ],
+    "description": "Core skills required to build and grow engineering- and technology-based businesses through lecture, case discussions, and weekly activities tied to a semester-long team project. Content includes market analysis techniques, combinatorial business design and planning methods, strategic innovation theories, competitive analysis, methods of emergent strategy and risk mitigation, team building, and organizational design principles.",
+    "semesters_offered": [
+      "Fall",
+      "Spring"
+    ],
+    "catalog_url": "https://catalog.purdue.edu/preview_course_nopop.php?catoid=17&coid=204087",
+    "boilerclasses_url": "https://boilerclasses.com/detail/CE59601EntrepreneurshipAndBusinessStrategyInEngineering",
+    "professors": {}
+  },
+  {
+    "code": "ENGR 50200",
+    "title": "Engineering Leadership",
+    "department": "ENGR",
+    "credits": 3,
+    "categories": [
+      "professional_skills"
+    ],
+    "description": "Leadership principles and practices for engineers. Topics include leadership styles, team dynamics, communication, conflict resolution, and leading technical organizations.",
+    "semesters_offered": [
+      "Fall",
+      "Spring"
+    ],
+    "catalog_url": "",
+    "boilerclasses_url": "https://boilerclasses.com/detail/ENGR50200EngineeringLeadership",
+    "professors": {}
+  },
+  {
+    "code": "ENGR 59600-SocialImpact",
+    "title": "Social Impact Startup Academy",
+    "department": "ENGR",
+    "credits": 3,
+    "categories": [
+      "professional_skills"
+    ],
+    "description": "Entrepreneurship program focused on building startups that address social challenges. Topics include lean startup methodology, social enterprise models, impact measurement, and venture development.",
+    "semesters_offered": [
+      "Spring"
+    ],
+    "catalog_url": "",
+    "boilerclasses_url": "https://boilerclasses.com/detail/ENGR59600SocialImpactStartupAcademy",
+    "professors": {}
+  },
+  {
+    "code": "ENGR 59600-SocialInnovation",
+    "title": "Social Innovation and Business",
+    "department": "ENGR",
+    "credits": 3,
+    "categories": [
+      "professional_skills"
+    ],
+    "description": "Explores the intersection of social innovation and business strategy. Topics include design thinking for social impact, business model innovation, and scaling social ventures.",
+    "semesters_offered": [
+      "Fall"
+    ],
+    "catalog_url": "",
+    "boilerclasses_url": "https://boilerclasses.com/detail/ENGR59600SocialInnovationAndBusiness",
+    "professors": {}
+  },
+  {
+    "code": "MGMT 56810",
+    "title": "Corporate Consulting Experiential Learning",
+    "department": "MGMT",
+    "credits": 3,
+    "categories": [
+      "professional_skills"
+    ],
+    "description": "Experiential learning through real corporate consulting engagements. Students work on actual business problems for partner companies, applying strategic analysis, data-driven recommendations, and professional presentation skills.",
+    "semesters_offered": [
+      "Fall",
+      "Spring"
+    ],
+    "catalog_url": "",
+    "boilerclasses_url": "https://boilerclasses.com/detail/MGMT56810CorporateConsultingExperientialLearning",
+    "professors": {}
+  },
+  {
+    "code": "MGMT 59000",
+    "title": "Student Managed Venture Fund",
+    "department": "MGMT",
+    "credits": 3,
+    "categories": [
+      "professional_skills"
+    ],
+    "description": "Students manage a real venture capital fund, evaluating startup investments. Topics include due diligence, valuation, deal structuring, portfolio management, and venture capital strategy.",
+    "semesters_offered": [
+      "Fall",
+      "Spring"
+    ],
+    "catalog_url": "",
+    "boilerclasses_url": "https://boilerclasses.com/detail/MGMT59000StudentManagedVentureFund",
+    "professors": {}
+  },
+  {
+    "code": "MGMT 650",
+    "title": "Strategic Management",
+    "department": "MGMT",
+    "credits": 3,
+    "categories": [
+      "professional_skills"
+    ],
+    "description": "Frameworks for strategic analysis and decision making. Topics include competitive strategy, industry analysis, resource-based view, corporate strategy, and strategic implementation.",
+    "semesters_offered": [
+      "Fall",
+      "Spring"
+    ],
+    "catalog_url": "",
+    "boilerclasses_url": "https://boilerclasses.com/detail/MGMT65000StrategicManagement",
+    "professors": {}
+  },
+  {
+    "code": "MGMT 660",
+    "title": "Introduction to Operations Management",
+    "department": "MGMT",
+    "credits": 3,
+    "categories": [
+      "professional_skills"
+    ],
+    "description": "Fundamentals of operations management. Topics include process analysis, capacity management, inventory management, supply chain management, quality, and lean operations.",
+    "semesters_offered": [
+      "Fall",
+      "Spring"
+    ],
+    "catalog_url": "",
+    "boilerclasses_url": "https://boilerclasses.com/detail/MGMT66000IntroductionToOperationsManagement",
+    "professors": {}
+  },
+  {
+    "code": "MGMT 66100",
+    "title": "Management of Operating Systems",
+    "department": "MGMT",
+    "credits": 3,
+    "categories": [
+      "professional_skills"
+    ],
+    "description": "Advanced operations management covering system design and operation. Topics include scheduling, project management, supply chain coordination, and technology management.",
+    "semesters_offered": [
+      "Spring"
+    ],
+    "catalog_url": "",
+    "boilerclasses_url": "https://boilerclasses.com/detail/MGMT66100ManagementOfOperatingSystems",
+    "professors": {}
+  },
+  {
+    "code": "MGMT 67000",
+    "title": "Business Analytics",
+    "department": "MGMT",
+    "credits": 3,
+    "categories": [
+      "professional_skills"
+    ],
+    "description": "Data-driven decision making for business. Topics include descriptive analytics, predictive modeling, prescriptive analytics, and data visualization for managerial decisions.",
+    "semesters_offered": [
+      "Fall",
+      "Spring"
+    ],
+    "catalog_url": "",
+    "boilerclasses_url": "https://boilerclasses.com/detail/MGMT67000BusinessAnalytics",
+    "professors": {}
+  },
+  {
+    "code": "MGMT 522",
+    "title": "New Product Development",
+    "department": "MGMT",
+    "credits": 3,
+    "categories": [
+      "professional_skills"
+    ],
+    "description": "Management of new product development processes. Topics include idea generation, concept testing, product design, market testing, and launch strategies.",
+    "semesters_offered": [
+      "Spring"
+    ],
+    "catalog_url": "",
+    "boilerclasses_url": "https://boilerclasses.com/detail/MGMT52200NewProductDevelopment",
+    "professors": {}
+  },
+  {
+    "code": "MGMT 562",
+    "title": "Project Management",
+    "department": "MGMT",
+    "credits": 3,
+    "categories": [
+      "professional_skills"
+    ],
+    "description": "Project management from a business perspective. Topics include project selection, planning, scheduling, resource management, risk assessment, and project governance.",
+    "semesters_offered": [
+      "Fall",
+      "Spring"
+    ],
+    "catalog_url": "",
+    "boilerclasses_url": "https://boilerclasses.com/detail/MGMT56200ProjectManagement",
+    "professors": {}
+  },
+  {
+    "code": "MGMT 565",
+    "title": "Strategic Sourcing and Procurement",
+    "department": "MGMT",
+    "credits": 3,
+    "categories": [
+      "professional_skills"
+    ],
+    "description": "Strategic approaches to sourcing and procurement management. Topics include supplier selection, negotiation, contract management, and procurement strategy.",
+    "semesters_offered": [
+      "Fall"
+    ],
+    "catalog_url": "",
+    "boilerclasses_url": "https://boilerclasses.com/detail/MGMT56500StrategicSourcingAndProcurement",
+    "professors": {}
+  },
+  {
+    "code": "MGMT 566",
+    "title": "Global Supply Chain Management",
+    "department": "MGMT",
+    "credits": 3,
+    "categories": [
+      "professional_skills"
+    ],
+    "description": "Management of global supply chains. Topics include supply chain strategy, logistics, distribution, global sourcing, risk management, and sustainability in supply chains.",
+    "semesters_offered": [
+      "Spring"
+    ],
+    "catalog_url": "",
+    "boilerclasses_url": "https://boilerclasses.com/detail/MGMT56600GlobalSupplyChainManagement",
+    "professors": {}
+  },
+  {
+    "code": "MGMT 571",
+    "title": "Data Mining",
+    "department": "MGMT",
+    "credits": 3,
+    "categories": [
+      "professional_skills"
+    ],
+    "description": "Techniques for extracting knowledge from large datasets. Topics include classification, clustering, association rules, text mining, and practical applications in business.",
+    "semesters_offered": [
+      "Fall"
+    ],
+    "catalog_url": "",
+    "boilerclasses_url": "https://boilerclasses.com/detail/MGMT57100DataMining",
+    "professors": {}
+  },
+  {
+    "code": "MGMT 586",
+    "title": "Python Programming",
+    "department": "MGMT",
+    "credits": 3,
+    "categories": [
+      "professional_skills"
+    ],
+    "description": "Python programming for business applications. Topics include data manipulation, automation, web scraping, data visualization, and building analytical tools.",
+    "semesters_offered": [
+      "Fall",
+      "Spring"
+    ],
+    "catalog_url": "",
+    "boilerclasses_url": "https://boilerclasses.com/detail/MGMT58600PythonProgramming",
+    "professors": {}
+  },
+  {
+    "code": "MGMT 683",
+    "title": "Technology Driven Business",
+    "department": "MGMT",
+    "credits": 3,
+    "categories": [
+      "professional_skills"
+    ],
+    "description": "Management of technology-driven businesses. Topics include technology strategy, digital transformation, platform economics, and managing innovation in tech organizations.",
+    "semesters_offered": [
+      "Spring"
+    ],
+    "catalog_url": "",
+    "boilerclasses_url": "https://boilerclasses.com/detail/MGMT68300TechnologyDrivenBusiness",
+    "professors": {}
+  },
+  {
+    "code": "MGMT 688",
+    "title": "Developing a Global Business Strategy",
+    "department": "MGMT",
+    "credits": 3,
+    "categories": [
+      "professional_skills"
+    ],
+    "description": "Development of global business strategies. Topics include international market entry, cross-cultural management, global operations, and multinational strategy.",
+    "semesters_offered": [
+      "Fall"
+    ],
+    "catalog_url": "",
+    "boilerclasses_url": "https://boilerclasses.com/detail/MGMT68800DevelopingAGlobalBusinessStrategy",
+    "professors": {}
+  },
+  {
+    "code": "MGMT 690",
+    "title": "Storytelling with Data",
+    "department": "MGMT",
+    "credits": 3,
+    "categories": [
+      "professional_skills"
+    ],
+    "description": "Effective data communication and visualization for business audiences. Topics include narrative structure, visual design principles, dashboard creation, and persuasive data presentation.",
+    "semesters_offered": [
+      "Fall",
+      "Spring"
+    ],
+    "catalog_url": "",
+    "boilerclasses_url": "https://boilerclasses.com/detail/MGMT69000StorytellingWithData",
+    "professors": {}
+  },
+  {
+    "code": "MGMT 590",
+    "title": "Launching Global Leaders",
+    "department": "MGMT",
+    "credits": 3,
+    "categories": [
+      "professional_skills"
+    ],
+    "description": "Leadership development program for global business contexts. Topics include cross-cultural leadership, global team management, and international business communication.",
+    "semesters_offered": [
+      "Fall"
+    ],
+    "catalog_url": "",
+    "boilerclasses_url": "https://boilerclasses.com/detail/MGMT59000LaunchingGlobalLeaders",
+    "professors": {}
+  },
+  {
+    "code": "ECE 59500-AIEthics",
+    "title": "AI, Ethics, and Society",
+    "department": "ECE",
+    "credits": 3,
+    "categories": [
+      "professional_skills"
+    ],
+    "description": "Ethical, social, and policy implications of artificial intelligence. Topics include bias, fairness, privacy, accountability, and governance of AI systems.",
+    "semesters_offered": [
+      "Spring"
+    ],
+    "catalog_url": "",
+    "boilerclasses_url": "https://boilerclasses.com/detail/ECE59500AIEthicsAndSociety",
+    "professors": {}
+  },
+  {
+    "code": "ECE 69500-CommLeaders",
+    "title": "Communication for Engineering Leaders",
+    "department": "ECE",
+    "credits": 3,
+    "categories": [
+      "professional_skills"
+    ],
+    "description": "Advanced communication skills for engineering leaders. Topics include executive communication, technical writing, stakeholder management, and persuasive presentations.",
+    "semesters_offered": [
+      "Fall"
+    ],
+    "catalog_url": "",
+    "boilerclasses_url": "https://boilerclasses.com/detail/ECE69500CommunicationForEngineeringLeaders",
+    "professors": {}
+  },
+  {
+    "code": "MGMT 68700",
+    "title": "AI for Business Decisions",
+    "department": "MGMT",
+    "credits": 3,
+    "categories": [
+      "elective"
+    ],
+    "description": "How AI can be utilized to create value and sustainable competitive advantage. Teaches the scientific process of using AI to transform data into predictions and insights for making better business decisions in a real-world setting.",
+    "semesters_offered": [
+      "Fall",
+      "Spring"
+    ],
+    "catalog_url": "",
+    "boilerclasses_url": "https://boilerclasses.com/detail/MGMT68700AIForBusinessDecisions",
+    "professors": {}
+  },
+  {
+    "code": "ME 53900",
+    "title": "Introduction to Scientific Machine Learning",
+    "department": "ME",
+    "credits": 3,
+    "categories": [
+      "engineering_depth_ME"
+    ],
+    "description": "Machine learning methods for scientific and engineering applications. Topics include neural networks, physics-informed ML, surrogate modeling, and data-driven discovery.",
+    "semesters_offered": [
+      "Fall",
+      "Spring"
+    ],
+    "catalog_url": "https://catalog.purdue.edu/preview_course_nopop.php?catoid=17&coid=204569",
+    "boilerclasses_url": "https://boilerclasses.com/detail/ME53900IntroductionToScientificMachineLearning",
+    "professors": {}
+  },
+  {
+    "code": "ECE 58000",
+    "title": "Optimization Methods for Systems and Control",
+    "department": "ECE",
+    "credits": 3,
+    "categories": [
+      "systems",
+      "engineering_depth_ECE"
+    ],
+    "description": "Optimization methods for systems and control problems. Topics include convex optimization, linear and nonlinear programming, and optimal control applications.",
+    "semesters_offered": [
+      "Fall"
+    ],
+    "catalog_url": "https://catalog.purdue.edu/preview_course_nopop.php?catoid=17&coid=202057",
+    "boilerclasses_url": "https://boilerclasses.com/detail/ECE58000OptimizationMethodsForSystemsAndControl",
+    "professors": {}
+  },
+  {
+    "code": "ME 55401",
+    "title": "Design for IP Protection and Commercialization",
+    "department": "ME",
+    "credits": 3,
+    "categories": [
+      "engineering_depth_ME"
+    ],
+    "description": "Intellectual property strategy for engineering products. Topics include patents, trade secrets, IP portfolio management, and technology commercialization.",
+    "semesters_offered": [
+      "Spring"
+    ],
+    "catalog_url": "https://catalog.purdue.edu/preview_course_nopop.php?catoid=17&coid=206021",
+    "boilerclasses_url": "https://boilerclasses.com/detail/ME55401DesignForIPProtectionAndCommercialization",
+    "professors": {}
+  },
+  {
+    "code": "IE 53700",
+    "title": "Discrete Optimization Models and Algorithms",
+    "department": "IE",
+    "credits": 3,
+    "categories": [
+      "engineering_depth_IE"
+    ],
+    "description": "Integer programming, combinatorial optimization, and network optimization. Topics include branch and bound, cutting planes, heuristics, and graph algorithms.",
+    "semesters_offered": [
+      "Spring"
+    ],
+    "catalog_url": "https://catalog.purdue.edu/preview_course_nopop.php?catoid=17&coid=202252",
+    "boilerclasses_url": "https://boilerclasses.com/detail/IE53700DiscreteOptimizationModelsAndAlgorithms",
+    "professors": {}
+  },
+  {
+    "code": "IE 58300",
+    "title": "Design and Evaluation of Material Handling Systems",
+    "department": "IE",
+    "credits": 3,
+    "categories": [
+      "engineering_depth_IE"
+    ],
+    "description": "Design principles for material handling systems. Topics include conveyor systems, automated guided vehicles, warehouse systems, and system simulation.",
+    "semesters_offered": [
+      "Fall"
+    ],
+    "catalog_url": "https://catalog.purdue.edu/preview_course_nopop.php?catoid=17&coid=202267",
+    "boilerclasses_url": "https://boilerclasses.com/detail/IE58300DesignAndEvaluationOfMaterialHandlingSystems",
+    "professors": {}
+  },
+  {
+    "code": "CEM 50100",
+    "title": "Leadership and Advanced Project Management",
+    "department": "CEM",
+    "credits": 3,
+    "categories": [
+      "engineering_depth_CEM"
+    ],
+    "description": "Advanced project management and leadership skills for construction and engineering management contexts. Topics include earned value, risk management, and leadership development.",
+    "semesters_offered": [
+      "Fall"
+    ],
+    "catalog_url": "https://catalog.purdue.edu/preview_course_nopop.php?catoid=17&coid=206587",
+    "boilerclasses_url": "https://boilerclasses.com/detail/CEM50100LeadershipAndAdvancedProjectManagement",
+    "professors": {}
+  },
+  {
+    "code": "CE 59700",
+    "title": "Innovation Science and Socio-Technical Change",
+    "department": "CE",
+    "credits": 3,
+    "categories": [
+      "professional_skills"
+    ],
+    "description": "Explores innovation science frameworks and methods for driving socio-technical change. Students learn to identify opportunities, frame complex problems, and design holistic solutions that account for technological, economic, social, and cultural dimensions of innovation adoption and impact.",
+    "semesters_offered": [
+      "Spring"
+    ],
+    "catalog_url": "",
+    "boilerclasses_url": "https://boilerclasses.com/detail/CE59700InnovationScienceAndSocioTechnicalChange",
+    "professors": {}
+  }
+]
