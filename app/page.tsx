@@ -189,9 +189,14 @@ export default function Home() {
                 MEM Pathfinder
               </span>
               <div className="flex-1" />
-              <span className="text-xs tracking-wide" style={{ color: "#555960" }}>
-                Purdue Engineering Management
-              </span>
+              <div className="text-right">
+                <span className="text-xs tracking-wide block" style={{ color: "#555960" }}>
+                  Purdue Engineering Management
+                </span>
+                <span className="text-[10px] tracking-wide block" style={{ color: "#555960", opacity: 0.6 }}>
+                  Not affiliated with Purdue
+                </span>
+              </div>
             </div>
 
             {/* Headline */}
