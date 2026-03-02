@@ -797,7 +797,8 @@
     "department": "CE",
     "credits": 3,
     "categories": [
-      "professional_skills"
+      "professional_skills",
+      "elective"
     ],
     "description": "Core skills required to build and grow engineering- and technology-based businesses through lecture, case discussions, and weekly activities tied to a semester-long team project. Content includes market analysis techniques, combinatorial business design and planning methods, strategic innovation theories, competitive analysis, methods of emergent strategy and risk mitigation, team building, and organizational design principles.",
     "semesters_offered": [
@@ -814,7 +815,8 @@
     "department": "ENGR",
     "credits": 3,
     "categories": [
-      "professional_skills"
+      "professional_skills",
+      "elective"
     ],
     "description": "Leadership principles and practices for engineers. Topics include leadership styles, team dynamics, communication, conflict resolution, and leading technical organizations.",
     "semesters_offered": [
@@ -831,7 +833,8 @@
     "department": "ENGR",
     "credits": 3,
     "categories": [
-      "professional_skills"
+      "professional_skills",
+      "elective"
     ],
     "description": "Entrepreneurship program focused on building startups that address social challenges. Topics include lean startup methodology, social enterprise models, impact measurement, and venture development.",
     "semesters_offered": [
@@ -847,7 +850,8 @@
     "department": "ENGR",
     "credits": 3,
     "categories": [
-      "professional_skills"
+      "professional_skills",
+      "elective"
     ],
     "description": "Explores the intersection of social innovation and business strategy. Topics include design thinking for social impact, business model innovation, and scaling social ventures.",
     "semesters_offered": [
@@ -858,12 +862,13 @@
     "professors": {}
   },
   {
-    "code": "MGMT 56810",
-    "title": "Corporate Consulting Experiential Learning",
+    "code": "MGMT 65810",
+    "title": "Corporate Consulting (ELI)",
     "department": "MGMT",
     "credits": 3,
     "categories": [
-      "professional_skills"
+      "professional_skills",
+      "elective"
     ],
     "description": "Experiential learning through real corporate consulting engagements. Students work on actual business problems for partner companies, applying strategic analysis, data-driven recommendations, and professional presentation skills.",
     "semesters_offered": [
@@ -871,7 +876,7 @@
       "Spring"
     ],
     "catalog_url": "",
-    "boilerclasses_url": "https://boilerclasses.com/detail/MGMT56810CorporateConsultingExperientialLearning",
+    "boilerclasses_url": "https://boilerclasses.com/detail/MGMT65810CorporateConsulting",
     "professors": {}
   },
   {
@@ -1274,7 +1279,8 @@
     "department": "CE",
     "credits": 3,
     "categories": [
-      "professional_skills"
+      "professional_skills",
+      "elective"
     ],
     "description": "Explores innovation science frameworks and methods for driving socio-technical change. Students learn to identify opportunities, frame complex problems, and design holistic solutions that account for technological, economic, social, and cultural dimensions of innovation adoption and impact.",
     "semesters_offered": [
@@ -1282,6 +1288,23 @@
     ],
     "catalog_url": "",
     "boilerclasses_url": "https://boilerclasses.com/detail/CE59700InnovationScienceAndSocioTechnicalChange",
+    "professors": {}
+  },
+  {
+    "code": "TDM 51100",
+    "title": "The Data Mine Corporate Partners",
+    "department": "TDM",
+    "credits": 3,
+    "categories": [
+      "elective"
+    ],
+    "description": "Experiential learning program where students work on real-world data science projects with corporate partners. Students apply data analytics, machine learning, and problem-solving skills to address actual business challenges.",
+    "semesters_offered": [
+      "Fall",
+      "Spring"
+    ],
+    "catalog_url": "",
+    "boilerclasses_url": "",
     "professors": {}
   }
 ]

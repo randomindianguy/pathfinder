@@ -53,14 +53,17 @@ Respond with ONLY a valid JSON array. No markdown, no explanation, no backticks.
 export function buildPlanningPrompt(
   role: RoleWithCuration,
   scoredCourses: { code: string; score: number; rationale: string }[],
-  courses: Course[]
+  courses: Course[],
+  remainingSlots?: Record<string, number>,
+  prePlacedCodes?: Set<string>
 ): string {
   const mustInclude = role.must_include || [];
   const preferredCodes = role.preferred || [];
+  const prePlaced = prePlacedCodes || new Set();
 
-  // Merge scored data with full course data
+  // Merge scored data with full course data, EXCLUDING pre-placed courses
   const enriched = scoredCourses
-    .filter(sc => sc.score >= 40)
+    .filter(sc => sc.score >= 40 && !prePlaced.has(sc.code))
     .sort((a, b) => b.score - a.score)
     .map(sc => {
       const full = courses.find(c => c.code === sc.code);
@@ -77,14 +80,22 @@ export function buildPlanningPrompt(
     });
 
   const mustIncludeBlock = mustInclude.length > 0
-    ? `\nMANDATORY PLACEMENTS (these courses MUST appear in the plan in their specified semester — non-negotiable):
+    ? `\nPRE-PLACED COURSES (these courses are ALREADY placed in the plan — do NOT include them again):
 ${mustInclude.map(m => `- ${m.code} → ${m.semester} (${m.reason})`).join("\n")}`
     : "";
 
   const preferredBlock = preferredCodes.length > 0
     ? `\nSTRONGLY PREFERRED (include as many of these as possible while satisfying constraints):
-${preferredCodes.join(", ")}`
+${preferredCodes.filter(code => !prePlaced.has(code)).join(", ")}`
     : "";
+
+  const slotsBlock = remainingSlots
+    ? `\nREMAINING SLOTS TO FILL (you are filling ONLY these remaining slots):
+- Fall 2026: ${remainingSlots["Fall 2026"]} courses
+- Spring 2027: ${remainingSlots["Spring 2027"]} courses
+- Fall 2027: ${remainingSlots["Fall 2027"]} courses
+TOTAL COURSES TO SELECT: ${remainingSlots["Fall 2026"] + remainingSlots["Spring 2027"] + remainingSlots["Fall 2027"]} courses`
+    : `\nSEMESTERS: Fall 2026 = 4 courses (12 cr), Spring 2027 = 4 courses (12 cr), Fall 2027 = 2 courses (6 cr)`;
 
   return `You are building a 3-semester course plan for a Purdue MEM student targeting: **${role.title}**
 
@@ -93,11 +104,11 @@ HARD CONSTRAINTS (the plan MUST satisfy ALL of these):
 2. ENGINEERING DEPTH: At least 9 credits (3 courses) from a SINGLE engineering discipline (courses with "engineering_depth_XX" where XX is the same department for all 3)
 3. PROFESSIONAL SKILLS: At least 9 credits (3 courses) from courses with "professional_skills" in their categories
 4. ELECTIVE: At least 3 credits (1 course) from any remaining course
-5. TOTAL: Exactly 30 credits (10 courses)
+5. TOTAL: Exactly 30 credits (10 courses) across the ENTIRE plan (including pre-placed courses)
 6. OVERLAP: A course with BOTH "systems" and "engineering_depth_IE" categories can count toward BOTH the systems and engineering depth requirements simultaneously
-7. SEMESTERS: Fall 2026 = 4 courses (12 cr), Spring 2027 = 4 courses (12 cr), Fall 2027 = 2 courses (6 cr)
-8. AVAILABILITY: Each course must be offered in its assigned semester. Check the "semesters_offered" field — "Fall" courses go in Fall 2026 or Fall 2027, "Spring" courses go in Spring 2027. Courses offered both "Fall" and "Spring" can go anywhere.
+7. AVAILABILITY: Each course must be offered in its assigned semester. Check the "semesters_offered" field — "Fall" courses go in Fall 2026 or Fall 2027, "Spring" courses go in Spring 2027. Courses offered both "Fall" and "Spring" can go anywhere.
 ${mustIncludeBlock}
+${slotsBlock}
 ${preferredBlock}
 
 CATEGORY ASSIGNMENT RULES:

@@ -94,7 +94,11 @@
       "MGMT 690",
       "MGMT 68700",
       "IE 53300",
-      "IE 58000"
+      "IE 58000",
+      "ENGR 50200",
+      "MGMT 65810",
+      "TDM 51100",
+      "ENGR 59600-SocialImpact"
     ]
   },
   "management_consultant": {
@@ -175,7 +179,16 @@
       }
     ],
     "must_include": [],
-    "preferred": []
+    "preferred": [
+      "MGMT 65810",
+      "CE 59601",
+      "ENGR 50200",
+      "MGMT 650",
+      "MGMT 67000",
+      "MGMT 690",
+      "IE 53300",
+      "IE 58000"
+    ]
   },
   "operations_manager": {
     "id": "operations_manager",
@@ -252,7 +265,14 @@
       }
     ],
     "must_include": [],
-    "preferred": []
+    "preferred": [
+      "ENGR 50200",
+      "MGMT 65810",
+      "MGMT 660",
+      "IE 56600",
+      "IE 57900",
+      "IE 53000"
+    ]
   },
   "supply_chain_analyst": {
     "id": "supply_chain_analyst",
@@ -328,7 +348,14 @@
       }
     ],
     "must_include": [],
-    "preferred": []
+    "preferred": [
+      "TDM 51100",
+      "MGMT 565",
+      "MGMT 566",
+      "IE 59000-SupplyChain",
+      "MGMT 586",
+      "IE 53500"
+    ]
   },
   "data_analyst": {
     "id": "data_analyst",
@@ -403,7 +430,15 @@
       }
     ],
     "must_include": [],
-    "preferred": []
+    "preferred": [
+      "TDM 51100",
+      "MGMT 65810",
+      "MGMT 586",
+      "MGMT 571",
+      "MGMT 67000",
+      "MGMT 690",
+      "IE 53300"
+    ]
   },
   "technical_program_manager": {
     "id": "technical_program_manager",
@@ -481,7 +516,14 @@
       }
     ],
     "must_include": [],
-    "preferred": []
+    "preferred": [
+      "ENGR 50200",
+      "MGMT 65810",
+      "IE 59000",
+      "MGMT 562",
+      "SYS 51000",
+      "IE 59000-RiskAnalysis"
+    ]
   },
   "business_analyst": {
     "id": "business_analyst",
@@ -557,7 +599,14 @@
       }
     ],
     "must_include": [],
-    "preferred": []
+    "preferred": [
+      "MGMT 65810",
+      "TDM 51100",
+      "MGMT 67000",
+      "MGMT 690",
+      "MGMT 650",
+      "IE 53300"
+    ]
   },
   "strategy_ops": {
     "id": "strategy_ops",
@@ -634,6 +683,14 @@
       }
     ],
     "must_include": [],
-    "preferred": []
+    "preferred": [
+      "CE 59601",
+      "MGMT 65810",
+      "ENGR 50200",
+      "CE 59700",
+      "MGMT 650",
+      "MGMT 67000",
+      "MGMT 660"
+    ]
   }
 }

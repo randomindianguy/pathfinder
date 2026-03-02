@@ -10,6 +10,8 @@ export interface Role {
   description: string;
   icon: string;
   skill_clusters: SkillCluster[];
+  must_include?: { code: string; semester: string; reason: string }[];
+  preferred?: string[];
 }
 
 export interface ProfessorInfo {

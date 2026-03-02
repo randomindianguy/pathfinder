@@ -156,6 +156,30 @@ export async function POST(request: NextRequest) {
 
     const role = roles[roleId];
 
+    // PRE-PLACEMENT: Place must_include courses before calling Claude
+    const mustInclude = role.must_include || [];
+    const prePlacedCodes = new Set(mustInclude.map(m => m.code));
+
+    // Create pre-placed semester structure
+    const prePlacedBySemester: Record<string, typeof mustInclude> = {
+      "Fall 2026": [],
+      "Spring 2027": [],
+      "Fall 2027": [],
+    };
+
+    mustInclude.forEach(m => {
+      if (prePlacedBySemester[m.semester]) {
+        prePlacedBySemester[m.semester].push(m);
+      }
+    });
+
+    // Calculate remaining slots per semester
+    const remainingSlots = {
+      "Fall 2026": 4 - prePlacedBySemester["Fall 2026"].length,
+      "Spring 2027": 4 - prePlacedBySemester["Spring 2027"].length,
+      "Fall 2027": 2 - prePlacedBySemester["Fall 2027"].length,
+    };
+
     // Step 1: Score all courses against this role
     const scoringPrompt = buildScoringPrompt(role, courses);
     const scoringRaw = await callClaude(scoringPrompt);
@@ -163,8 +187,8 @@ export async function POST(request: NextRequest) {
       { code: string; score: number; rationale: string }[]
     >(scoringRaw);
 
-    // Step 2: Build the semester plan
-    const planningPrompt = buildPlanningPrompt(role, scoredCourses, courses);
+    // Step 2: Build the semester plan (Claude only fills remaining slots)
+    const planningPrompt = buildPlanningPrompt(role, scoredCourses, courses, remainingSlots, prePlacedCodes);
     const planningRaw = await callClaude(planningPrompt);
     const plan = parseJSON<{
       semesters: {
@@ -182,12 +206,35 @@ export async function POST(request: NextRequest) {
       credit_summary: unknown;
     }>(planningRaw);
 
-    // Step 3: POST-PROCESS — fix categories deterministically
-    const allPlannedCourses = plan.semesters.flatMap((s) => s.courses);
+    // Step 3: MERGE pre-placed courses with Claude's picks
+    const mergedSemesters = plan.semesters.map(sem => {
+      const prePlaced = prePlacedBySemester[sem.semester] || [];
+      const prePlacedCourses = prePlaced.map(m => {
+        const fullCourse = courses.find(c => c.code === m.code);
+        const scored = scoredCourses.find(sc => sc.code === m.code);
+        return {
+          code: m.code,
+          title: fullCourse?.title || "",
+          department: fullCourse?.department || "",
+          credits: fullCourse?.credits || 3,
+          category_used: "professional_skills", // Will be fixed in post-processor
+          score: scored?.score || 95,
+          rationale: m.reason,
+        };
+      });
+
+      return {
+        ...sem,
+        courses: [...prePlacedCourses, ...sem.courses],
+      };
+    });
+
+    // Step 4: POST-PROCESS — fix categories deterministically
+    const allPlannedCourses = mergedSemesters.flatMap((s) => s.courses);
     const { categoryMap, summary } = assignCategories(allPlannedCourses);
 
     // Enrich with correct categories + boilerclasses URLs
-    const enrichedSemesters = plan.semesters.map((sem) => ({
+    const enrichedSemesters = mergedSemesters.map((sem) => ({
       ...sem,
       courses: sem.courses.map((c) => {
         const fullCourse = courses.find((fc) => fc.code === c.code);
