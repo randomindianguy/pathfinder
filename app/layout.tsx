@@ -25,9 +25,6 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-screen">
-        {children}
-      </body>
-      <body className="min-h-screen">
         <PostHogProvider>{children}</PostHogProvider>
       </body>
     </html>
