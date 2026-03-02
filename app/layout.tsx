@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { PostHogProvider } from "./providers";
 
 export const metadata: Metadata = {
   title: "MEM Pathfinder — Purdue Course Planner",
@@ -25,6 +26,9 @@ export default function RootLayout({
       </head>
       <body className="min-h-screen">
         {children}
+      </body>
+      <body className="min-h-screen">
+        <PostHogProvider>{children}</PostHogProvider>
       </body>
     </html>
   );
