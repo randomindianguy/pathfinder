@@ -108,11 +108,26 @@ export default function PlanPage() {
   const [plan, setPlan] = useState<GeneratedPlan | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [loadingStep, setLoadingStep] = useState(0);
+  const [progress, setProgress] = useState(0);
+  const [elapsed, setElapsed] = useState(0);
 
   useEffect(() => {
-    const interval = setInterval(() => {
+    const stepInterval = setInterval(() => {
       setLoadingStep((prev) => (prev < LOADING_STEPS.length - 1 ? prev + 1 : prev));
     }, 3000);
+
+    const progressInterval = setInterval(() => {
+      setProgress((prev) => {
+        // Fast to 70% in ~10s (2.8% per 400ms)
+        if (prev < 70) return prev + 2.8;
+        // Slower to 85% in next ~10s (0.6% per 400ms)
+        if (prev < 85) return prev + 0.6;
+        // Crawl to 92% and stall (0.15% per 400ms)
+        if (prev < 92) return prev + 0.15;
+        return prev;
+      });
+      setElapsed((prev) => prev + 0.4);
+    }, 400);
 
     const fetchPlan = async () => {
       try {
@@ -126,6 +141,11 @@ export default function PlanPage() {
           throw new Error(data.error || "Failed to generate plan");
         }
         const data = await res.json();
+
+        // Set progress to 100% and wait before showing plan
+        setProgress(100);
+        await new Promise(resolve => setTimeout(resolve, 400));
+
         setPlan(data);
         posthog.capture("plan_viewed", {
           role: roleId,
@@ -137,18 +157,47 @@ export default function PlanPage() {
     };
 
     fetchPlan();
-    return () => clearInterval(interval);
+    return () => {
+      clearInterval(stepInterval);
+      clearInterval(progressInterval);
+    };
   }, [roleId]);
 
   // Loading
   if (!plan && !error) {
+    const remaining = Math.max(0, Math.ceil(25 - elapsed));
+
     return (
       <main className="min-h-screen flex items-center justify-center" style={{ background: "#000" }}>
         <div className="text-center text-white max-w-md px-6">
           <Compass size={48} className="mx-auto mb-6 animate-pulse" style={{ color: "#CFB991" }} />
-          <h2 className="text-2xl font-bold mb-8" style={{ fontFamily: "'DM Serif Display', Georgia, serif" }}>
+          <h2 className="text-2xl font-bold mb-3" style={{ fontFamily: "'DM Serif Display', Georgia, serif" }}>
             Building your plan...
           </h2>
+          <p className="text-sm mb-6" style={{ color: "#9CA3AF" }}>
+            Analyzing 60+ courses with AI — this takes about 20-30 seconds
+          </p>
+
+          {/* Progress Bar */}
+          <div className="mb-3">
+            <div className="h-2 rounded-full overflow-hidden" style={{ background: "#1F2937" }}>
+              <div
+                className="h-full transition-all duration-[400ms] ease-out"
+                style={{
+                  width: `${progress}%`,
+                  background: "linear-gradient(90deg, #CFB991, #E8D5A8)",
+                }}
+              />
+            </div>
+          </div>
+
+          {/* Progress Stats */}
+          <div className="flex items-center justify-between text-xs mb-8" style={{ color: "#9CA3AF" }}>
+            <span>{Math.round(progress)}%</span>
+            <span>~{remaining}s remaining</span>
+          </div>
+
+          {/* Step Checklist */}
           <div className="space-y-3">
             {LOADING_STEPS.map((step, i) => (
               <div key={i} className={`flex items-center gap-3 transition-all duration-500 ${i <= loadingStep ? "opacity-100" : "opacity-30"}`}>
