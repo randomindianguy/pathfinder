@@ -55,18 +55,23 @@ export function buildPlanningPrompt(
   scoredCourses: { code: string; score: number; rationale: string }[],
   courses: Course[],
   remainingSlots?: Record<string, number>,
-  prePlacedCodes?: Set<string>
+  prePlacedCodes?: Set<string>,
+  depthDepartment?: string
 ): string {
   const mustInclude = role.must_include || [];
   const preferredCodes = role.preferred || [];
   const prePlaced = prePlacedCodes || new Set();
+  const selectedDepth = depthDepartment || "IE";
 
   // Merge scored data with full course data, EXCLUDING pre-placed courses
+  const depthCategory = `engineering_depth_${selectedDepth}`;
   const enriched = scoredCourses
     .filter(sc => sc.score >= 40 && !prePlaced.has(sc.code))
-    .sort((a, b) => b.score - a.score)
     .map(sc => {
       const full = courses.find(c => c.code === sc.code);
+      // Boost score for courses matching selected depth discipline
+      const hasMatchingDepth = full?.categories?.includes(depthCategory);
+      const boostedScore = hasMatchingDepth ? sc.score + 5 : sc.score;
       return {
         code: sc.code,
         title: full?.title || "",
@@ -74,10 +79,11 @@ export function buildPlanningPrompt(
         credits: full?.credits || 3,
         categories: full?.categories || [],
         semesters_offered: full?.semesters_offered || [],
-        score: sc.score,
+        score: boostedScore,
         rationale: sc.rationale,
       };
-    });
+    })
+    .sort((a, b) => b.score - a.score);
 
   const mustIncludeBlock = mustInclude.length > 0
     ? `\nPRE-PLACED COURSES (these courses are ALREADY placed in the plan — do NOT include them again):
@@ -101,11 +107,11 @@ TOTAL COURSES TO SELECT: ${remainingSlots["Fall 2026"] + remainingSlots["Spring 
 
 HARD CONSTRAINTS (the plan MUST satisfy ALL of these):
 1. SYSTEMS: At least 9 credits (3 courses) from courses that have "systems" in their categories array
-2. ENGINEERING DEPTH: At least 9 credits (3 courses) from a SINGLE engineering discipline (courses with "engineering_depth_XX" where XX is the same department for all 3)
+2. ENGINEERING DEPTH: All 3 engineering depth courses (9 credits) MUST have "engineering_depth_${selectedDepth}" in their categories. Do not use any other discipline. The user has selected ${selectedDepth} as their depth discipline.
 3. PROFESSIONAL SKILLS: At least 9 credits (3 courses) from courses with "professional_skills" in their categories
 4. ELECTIVE: At least 3 credits (1 course) from any remaining course
 5. TOTAL: Exactly 30 credits (10 courses) across the ENTIRE plan (including pre-placed courses)
-6. OVERLAP: A course with BOTH "systems" and "engineering_depth_IE" categories can count toward BOTH the systems and engineering depth requirements simultaneously
+6. OVERLAP: A course with BOTH "systems" and "engineering_depth_${selectedDepth}" categories can count toward BOTH the systems and engineering depth requirements simultaneously
 7. AVAILABILITY: Each course must be offered in its assigned semester. Check the "semesters_offered" field — "Fall" courses go in Fall 2026 or Fall 2027, "Spring" courses go in Spring 2027. Courses offered both "Fall" and "Spring" can go anywhere.
 ${mustIncludeBlock}
 ${slotsBlock}
@@ -113,7 +119,7 @@ ${preferredBlock}
 
 CATEGORY ASSIGNMENT RULES:
 - When assigning "category_used" for each course, use the category that best fills an unfilled requirement
-- A course with categories ["systems", "engineering_depth_IE"] should be assigned "systems" if it's one of the 3 filling the systems requirement, OR "engineering_depth" if it's filling that bucket — but remember overlap means it counts for both internally
+- A course with categories ["systems", "engineering_depth_${selectedDepth}"] should be assigned "systems" if it's one of the 3 filling the systems requirement, OR "engineering_depth" if it's filling that bucket — but remember overlap means it counts for both internally
 - Professional skills courses get "professional_skills"
 - The 10th course (or any beyond the required 9+9+9) gets "elective"
 

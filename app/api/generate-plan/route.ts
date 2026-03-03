@@ -13,7 +13,8 @@ const courses = coursesData as Course[];
  * Claude often gets this wrong, so we fix it here.
  */
 function assignCategories(
-  plannedCourses: { code: string; [key: string]: unknown }[]
+  plannedCourses: { code: string; [key: string]: unknown }[],
+  depthDepartment: string
 ): { categoryMap: Record<string, string>; summary: ReturnType<typeof buildSummary> } {
   const categoryMap: Record<string, string> = {};
   const assigned = {
@@ -37,35 +38,16 @@ function assignCategories(
     }
   });
 
-  // Step 2: Find best engineering depth discipline
-  const depthCounts: Record<string, string[]> = {};
+  // Step 2: Use user-selected depth discipline
+  const depthCategory = `engineering_depth_${depthDepartment}`;
+
+  // Step 3: Assign engineering_depth (only from selected discipline, these also count as systems via overlap)
   courseData.forEach((c) => {
-    if (categoryMap[c.code]) return; // already assigned
-    c.categories
-      .filter((cat) => cat.startsWith("engineering_depth_"))
-      .forEach((cat) => {
-        const disc = cat.replace("engineering_depth_", "");
-        if (!depthCounts[disc]) depthCounts[disc] = [];
-        depthCounts[disc].push(c.code);
-      });
-  });
-
-  // Pick discipline with most available courses
-  let bestDisc = "IE";
-  let bestCount = 0;
-  Object.entries(depthCounts).forEach(([disc, codes]) => {
-    if (codes.length > bestCount) {
-      bestDisc = disc;
-      bestCount = codes.length;
-    }
-  });
-
-  // Step 3: Assign engineering_depth (these also count as systems via overlap)
-  const depthCandidates = depthCounts[bestDisc] || [];
-  depthCandidates.forEach((code) => {
-    if (!categoryMap[code] && assigned.engineering_depth.length < 3) {
-      categoryMap[code] = "engineering_depth";
-      assigned.engineering_depth.push(code);
+    if (!categoryMap[c.code] &&
+        c.categories.includes(depthCategory) &&
+        assigned.engineering_depth.length < 3) {
+      categoryMap[c.code] = "engineering_depth";
+      assigned.engineering_depth.push(c.code);
     }
   });
 
@@ -96,7 +78,7 @@ function assignCategories(
     }
   });
 
-  const summary = buildSummary(assigned, systemsFulfilled, bestDisc);
+  const summary = buildSummary(assigned, systemsFulfilled, depthDepartment);
   return { categoryMap, summary };
 }
 
@@ -148,13 +130,14 @@ function buildSummary(
 
 export async function POST(request: NextRequest) {
   try {
-    const { roleId } = await request.json();
+    const { roleId, depthDepartment } = await request.json();
 
     if (!roleId || !roles[roleId]) {
       return NextResponse.json({ error: "Invalid role ID" }, { status: 400 });
     }
 
     const role = roles[roleId];
+    const selectedDepth = depthDepartment || "IE";
 
     // PRE-PLACEMENT: Place must_include courses before calling Claude
     const mustInclude = role.must_include || [];
@@ -188,7 +171,7 @@ export async function POST(request: NextRequest) {
     >(scoringRaw);
 
     // Step 2: Build the semester plan (Claude only fills remaining slots)
-    const planningPrompt = buildPlanningPrompt(role, scoredCourses, courses, remainingSlots, prePlacedCodes);
+    const planningPrompt = buildPlanningPrompt(role, scoredCourses, courses, remainingSlots, prePlacedCodes, selectedDepth);
     const planningRaw = await callClaude(planningPrompt);
     const plan = parseJSON<{
       semesters: {
@@ -231,7 +214,7 @@ export async function POST(request: NextRequest) {
 
     // Step 4: POST-PROCESS — fix categories deterministically
     const allPlannedCourses = mergedSemesters.flatMap((s) => s.courses);
-    const { categoryMap, summary } = assignCategories(allPlannedCourses);
+    const { categoryMap, summary } = assignCategories(allPlannedCourses, selectedDepth);
 
     // Enrich with correct categories + boilerclasses URLs
     const enrichedSemesters = mergedSemesters.map((sem) => ({

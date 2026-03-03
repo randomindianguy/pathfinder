@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { useParams, useRouter } from "next/navigation";
+import { useParams, useRouter, useSearchParams } from "next/navigation";
 import posthog from "posthog-js";
 import {
   ArrowLeft,
@@ -103,7 +103,9 @@ function CreditBar({ label, required, fulfilled, colorKey }: {
 export default function PlanPage() {
   const params = useParams();
   const router = useRouter();
+  const searchParams = useSearchParams();
   const roleId = params.role as string;
+  const depth = searchParams.get("depth") || "IE";
 
   const [plan, setPlan] = useState<GeneratedPlan | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -132,7 +134,7 @@ export default function PlanPage() {
         const res = await fetch("/api/generate-plan", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ roleId }),
+          body: JSON.stringify({ roleId, depthDepartment: depth }),
         });
         if (!res.ok) {
           const data = await res.json();
@@ -159,7 +161,7 @@ export default function PlanPage() {
       clearInterval(stepInterval);
       clearInterval(progressInterval);
     };
-  }, [roleId]);
+  }, [roleId, depth]);
 
   // Loading
   if (!plan && !error) {

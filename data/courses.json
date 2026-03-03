@@ -1263,7 +1263,8 @@
     "department": "CEM",
     "credits": 3,
     "categories": [
-      "engineering_depth_CEM"
+      "systems",
+      "engineering_depth_CE"
     ],
     "description": "Advanced project management and leadership skills for construction and engineering management contexts. Topics include earned value, risk management, and leadership development.",
     "semesters_offered": [
@@ -1288,6 +1289,166 @@
     ],
     "catalog_url": "",
     "boilerclasses_url": "https://boilerclasses.com/detail/CE59700InnovationScienceAndSocioTechnicalChange",
+    "professors": {}
+  },
+  {
+    "code": "MSE 53000",
+    "title": "Materials Processing in Manufacturing",
+    "department": "MSE",
+    "credits": 3,
+    "categories": [
+      "systems",
+      "engineering_depth_MSE"
+    ],
+    "description": "Manufacturing processes for materials including casting, forming, joining, and machining. Topics include process selection, quality control, and process optimization.",
+    "semesters_offered": [
+      "Fall",
+      "Spring"
+    ],
+    "catalog_url": "",
+    "boilerclasses_url": "",
+    "professors": {}
+  },
+  {
+    "code": "MSE 51800",
+    "title": "Failure Analysis",
+    "department": "MSE",
+    "credits": 3,
+    "categories": [
+      "systems",
+      "engineering_depth_MSE"
+    ],
+    "description": "Analysis of component and system failures. Topics include failure mechanisms, root cause analysis, materials characterization, and failure prevention strategies.",
+    "semesters_offered": [
+      "Fall",
+      "Spring"
+    ],
+    "catalog_url": "",
+    "boilerclasses_url": "",
+    "professors": {}
+  },
+  {
+    "code": "MSE 57000",
+    "title": "Introduction to Materials Modeling and Informatics",
+    "department": "MSE",
+    "credits": 3,
+    "categories": [
+      "engineering_depth_MSE"
+    ],
+    "description": "Computational methods for materials modeling and data-driven materials discovery. Topics include materials databases, machine learning for materials, and computational materials design.",
+    "semesters_offered": [
+      "Fall",
+      "Spring"
+    ],
+    "catalog_url": "",
+    "boilerclasses_url": "",
+    "professors": {}
+  },
+  {
+    "code": "MSE 57400",
+    "title": "Sports Engineering and Entrepreneurship",
+    "department": "MSE",
+    "credits": 3,
+    "categories": [
+      "professional_skills",
+      "engineering_depth_MSE"
+    ],
+    "description": "Engineering design and entrepreneurship in sports equipment and technology. Topics include materials selection, product development, commercialization, and innovation in sports.",
+    "semesters_offered": [
+      "Fall",
+      "Spring"
+    ],
+    "catalog_url": "",
+    "boilerclasses_url": "",
+    "professors": {}
+  },
+  {
+    "code": "CE 52100",
+    "title": "Construction Business Management",
+    "department": "CE",
+    "credits": 3,
+    "categories": [
+      "systems",
+      "engineering_depth_CE"
+    ],
+    "description": "Business management principles applied to construction firms. Topics include financial management, business strategy, risk management, and organizational development.",
+    "semesters_offered": [
+      "Fall",
+      "Spring"
+    ],
+    "catalog_url": "",
+    "boilerclasses_url": "",
+    "professors": {}
+  },
+  {
+    "code": "CE 52200",
+    "title": "Computer Applications in Construction",
+    "department": "CE",
+    "credits": 3,
+    "categories": [
+      "systems",
+      "engineering_depth_CE"
+    ],
+    "description": "Application of computer technology to construction planning and management. Topics include BIM, scheduling software, cost estimation tools, and construction simulation.",
+    "semesters_offered": [
+      "Fall",
+      "Spring"
+    ],
+    "catalog_url": "",
+    "boilerclasses_url": "",
+    "professors": {}
+  },
+  {
+    "code": "CE 51200",
+    "title": "Urban Planning and Analysis",
+    "department": "CE",
+    "credits": 3,
+    "categories": [
+      "engineering_depth_CE"
+    ],
+    "description": "Principles of urban and regional planning including land use, transportation systems, infrastructure development, and sustainable urban design.",
+    "semesters_offered": [
+      "Fall",
+      "Spring"
+    ],
+    "catalog_url": "",
+    "boilerclasses_url": "",
+    "professors": {}
+  },
+  {
+    "code": "CE 56800",
+    "title": "Highway Infrastructure Management Systems",
+    "department": "CE",
+    "credits": 3,
+    "categories": [
+      "systems",
+      "engineering_depth_CE"
+    ],
+    "description": "Management and maintenance of highway infrastructure systems. Topics include pavement management, asset management, lifecycle analysis, and infrastructure optimization.",
+    "semesters_offered": [
+      "Fall",
+      "Spring"
+    ],
+    "catalog_url": "",
+    "boilerclasses_url": "",
+    "professors": {}
+  },
+  {
+    "code": "CE 52400",
+    "title": "Legal Aspects in Engineering Practice",
+    "department": "CE",
+    "credits": 3,
+    "categories": [
+      "professional_skills",
+      "engineering_depth_CE"
+    ],
+    "description": "Legal principles affecting engineering practice including contracts, liability, professional ethics, and regulatory compliance.",
+    "semesters_offered": [
+      "Fall",
+      "Spring"
+    ],
+    "catalog_url": "",
+    "boilerclasses_url": "",
     "professors": {}
   },
   {

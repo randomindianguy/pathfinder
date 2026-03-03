@@ -39,19 +39,37 @@ const stats = [
   { value: "30", label: "Credits optimized" },
 ];
 
+const depthDisciplines = [
+  { id: "IE", name: "Industrial Engineering", description: "Operations, human factors, quality systems" },
+  { id: "ME", name: "Mechanical Engineering", description: "Design, manufacturing, thermal systems" },
+  { id: "ECE", name: "Electrical & Computer Engineering", description: "Electronics, software, signal processing" },
+  { id: "CE", name: "Civil Engineering", description: "Construction, infrastructure, project management" },
+  { id: "MSE", name: "Materials Engineering", description: "Materials science, manufacturing processes" },
+];
+
 export default function Home() {
   const router = useRouter();
   const [loading, setLoading] = useState<string | null>(null);
   const [mounted, setMounted] = useState(false);
+  const [showDepthModal, setShowDepthModal] = useState(false);
+  const [selectedRole, setSelectedRole] = useState<string | null>(null);
 
   useEffect(() => {
     setMounted(true);
   }, []);
 
-  const handleSelect = (roleId: string) => {
-    setLoading(roleId);
+  const handleRoleSelect = (roleId: string) => {
+    setSelectedRole(roleId);
+    setShowDepthModal(true);
     posthog.capture("role_selected", { role: roleId });
-    router.push(`/plan/${roleId}`);
+  };
+
+  const handleDepthSelect = (depthId: string) => {
+    if (!selectedRole) return;
+    setLoading(selectedRole);
+    setShowDepthModal(false);
+    posthog.capture("depth_selected", { role: selectedRole, depth: depthId });
+    router.push(`/plan/${selectedRole}?depth=${depthId}`);
   };
 
   return (
@@ -303,8 +321,8 @@ export default function Home() {
               return (
                 <button
                   key={role.id}
-                  onClick={() => handleSelect(role.id)}
-                  disabled={loading !== null}
+                  onClick={() => handleRoleSelect(role.id)}
+                  disabled={loading !== null || showDepthModal}
                   className={`role-card text-left p-5 rounded-xl bg-white ${mounted ? "animate-fade-up" : "opacity-0"}`}
                   style={{
                     border: isLoading ? "1.5px solid #CFB991" : "1.5px solid #E5E7EB",
@@ -346,6 +364,56 @@ export default function Home() {
             })}
           </div>
         </div>
+
+        {/* ═══ DEPTH SELECTION MODAL ═══ */}
+        {showDepthModal && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center px-6" style={{ background: "rgba(0, 0, 0, 0.7)" }}>
+            <div className="bg-white rounded-2xl max-w-2xl w-full p-8 shadow-2xl animate-fade-up" style={{ animationDuration: "0.3s" }}>
+              <div className="mb-6">
+                <h3
+                  className="text-2xl font-bold mb-2"
+                  style={{ fontFamily: "'Playfair Display', Georgia, serif", color: "#1a1a1a" }}
+                >
+                  Choose your engineering depth discipline
+                </h3>
+                <p className="text-sm" style={{ color: "#6B7280" }}>
+                  You'll take 3 depth courses (9 credits) from this area. Pick the discipline that aligns with your technical interests.
+                </p>
+              </div>
+
+              <div className="space-y-3 mb-6">
+                {depthDisciplines.map((depth) => (
+                  <button
+                    key={depth.id}
+                    onClick={() => handleDepthSelect(depth.id)}
+                    className="w-full text-left p-4 rounded-lg border-2 transition-all hover:border-[#CFB991] hover:bg-[#FFFBF0]"
+                    style={{ border: "2px solid #E5E7EB" }}
+                  >
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <h4 className="font-bold text-base mb-1" style={{ fontFamily: "'DM Sans', system-ui, sans-serif" }}>
+                          {depth.name}
+                        </h4>
+                        <p className="text-xs" style={{ color: "#6B7280" }}>
+                          {depth.description}
+                        </p>
+                      </div>
+                      <ArrowRight size={20} style={{ color: "#CFB991" }} />
+                    </div>
+                  </button>
+                ))}
+              </div>
+
+              <button
+                onClick={() => setShowDepthModal(false)}
+                className="w-full py-2.5 text-sm font-medium rounded-lg transition-colors"
+                style={{ background: "#F3F4F6", color: "#6B7280" }}
+              >
+                Go back
+              </button>
+            </div>
+          </div>
+        )}
 
         {/* ═══ FOOTER ═══ */}
         <div style={{ borderTop: "1px solid #E5E7EB" }}>
