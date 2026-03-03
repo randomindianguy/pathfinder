@@ -48,7 +48,7 @@ function CategoryBadge({ category }: { category: string }) {
   );
 }
 
-function CourseCard({ course }: { course: PlannedCourse }) {
+function CourseCard({ course, roleId }: { course: PlannedCourse; roleId: string }) {
   return (
     <div className="bg-white rounded-lg border border-gray-200 p-4 hover:shadow-md transition-shadow">
       <div className="flex items-start justify-between gap-2 mb-2">
@@ -70,6 +70,10 @@ function CourseCard({ course }: { course: PlannedCourse }) {
           rel="noopener noreferrer"
           className="inline-flex items-center gap-1 text-[11px] font-medium"
           style={{ color: "#2563EB" }}
+          onClick={() => posthog.capture("boilerclasses_clicked", {
+            course: course.code,
+            role: roleId
+          })}
         >
           Check professors & details on BoilerClasses <ExternalLink size={10} />
         </a>
@@ -315,7 +319,7 @@ export default function PlanPage() {
               </div>
               <div className="space-y-3">
                 {sem.courses.map((course) => (
-                  <CourseCard key={course.code} course={course} />
+                  <CourseCard key={course.code} course={course} roleId={roleId} />
                 ))}
               </div>
             </div>
@@ -330,7 +334,18 @@ export default function PlanPage() {
             Built for Purdue MEM students · Course data from{" "}
             <a href="https://engineering.purdue.edu/EngineeringManagement" className="underline" target="_blank" rel="noopener noreferrer">Purdue MEM</a>
             {" & "}
-            <a href="https://boilerclasses.com" className="underline" target="_blank" rel="noopener noreferrer">BoilerClasses</a>
+            <a
+              href="https://boilerclasses.com"
+              className="underline"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => posthog.capture("boilerclasses_clicked", {
+                course: "homepage",
+                role: roleId
+              })}
+            >
+              BoilerClasses
+            </a>
             {" · Built by "}
             <a href="https://www.linkedin.com/in/sidharthsundaram/" style={{ color: "#CFB991" }} className="hover:underline" target="_blank" rel="noopener noreferrer">Sidharth Sundaram</a>
           </p>
