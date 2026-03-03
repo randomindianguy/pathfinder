@@ -294,16 +294,10 @@ export default function PlanPage() {
 
       {/* 3-Column Semester Layout */}
       <div className="max-w-6xl mx-auto px-6 pb-16">
-        <div className="rounded-lg p-3 mb-3 flex items-start gap-2" style={{ background: "#FEF3C7", border: "1px solid #FDE68A" }}>
-          <AlertTriangle size={14} className="shrink-0 mt-0.5" style={{ color: "#B45309" }} />
-          <p className="text-xs leading-relaxed" style={{ color: "#92400E" }}>
-            <strong>Heads up:</strong> This plan recommends courses, not professors. Always check professor ratings and reviews on BoilerClasses before registering.
-          </p>
-        </div>
         <div className="rounded-lg p-3 mb-6 flex items-start gap-2" style={{ background: "#FEF3C7", border: "1px solid #FDE68A" }}>
           <AlertTriangle size={14} className="shrink-0 mt-0.5" style={{ color: "#B45309" }} />
           <p className="text-xs leading-relaxed" style={{ color: "#92400E" }}>
-            <strong>Disclaimer:</strong> This is an AI-generated course suggestion — not a substitute for academic advising. Always verify course availability, plan details, and professor ratings with your MEM advisor and BoilerClasses before registering.
+            <strong>Heads up:</strong> This plan recommends courses, not professors. Always check professor ratings and reviews on BoilerClasses before registering.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
