@@ -190,10 +190,10 @@ export default function Home() {
               </span>
               <div className="flex-1" />
               <div className="text-right">
-                <span className="text-xs tracking-wide block" style={{ color: "#555960" }}>
+                <span className="text-xs tracking-wide block" style={{ color: "#9CA3AF" }}>
                   Purdue Engineering Management
                 </span>
-                <span className="text-[10px] tracking-wide block" style={{ color: "#555960", opacity: 0.6 }}>
+                <span className="text-[10px] tracking-wide block" style={{ color: "#6B7280" }}>
                   Not affiliated with Purdue
                 </span>
               </div>
