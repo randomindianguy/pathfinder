@@ -266,6 +266,16 @@ export default function PlanPage() {
         </div>
       </div>
 
+      {/* Info Banner */}
+      <div className="max-w-6xl mx-auto px-6 pt-6">
+        <div className="rounded-lg p-3 flex items-start gap-2" style={{ background: "#EBF5FF", border: "1px solid #BFDBFE" }}>
+          <Compass size={14} className="shrink-0 mt-0.5" style={{ color: "#1E40AF" }} />
+          <p className="text-xs leading-relaxed" style={{ color: "#1E3A8A" }}>
+            <strong>This is one possible plan.</strong> There are many valid paths to {role.title}. Use this as a starting point for your advisor conversation.
+          </p>
+        </div>
+      </div>
+
       {/* Credit Summary */}
       <div className="max-w-6xl mx-auto px-6 py-6">
         <div className="bg-white rounded-xl border border-gray-200 p-5">
