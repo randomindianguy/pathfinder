@@ -175,7 +175,7 @@ export default function PlanPage() {
             Building your plan...
           </h2>
           <p className="text-sm mb-6" style={{ color: "#9CA3AF" }}>
-            Analyzing 60+ courses with AI — this takes about 20-30 seconds
+            Analyzing 60+ courses with AI — this takes upto 60 seconds
           </p>
 
           {/* Progress Bar */}
