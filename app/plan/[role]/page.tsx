@@ -109,7 +109,6 @@ export default function PlanPage() {
   const [error, setError] = useState<string | null>(null);
   const [loadingStep, setLoadingStep] = useState(0);
   const [progress, setProgress] = useState(0);
-  const [elapsed, setElapsed] = useState(0);
 
   useEffect(() => {
     const stepInterval = setInterval(() => {
@@ -126,7 +125,6 @@ export default function PlanPage() {
         if (prev < 92) return prev + 0.15;
         return prev;
       });
-      setElapsed((prev) => prev + 0.4);
     }, 400);
 
     const fetchPlan = async () => {
@@ -165,8 +163,6 @@ export default function PlanPage() {
 
   // Loading
   if (!plan && !error) {
-    const remaining = Math.max(0, Math.ceil(25 - elapsed));
-
     return (
       <main className="min-h-screen flex items-center justify-center" style={{ background: "#000" }}>
         <div className="text-center text-white max-w-md px-6">
@@ -192,9 +188,8 @@ export default function PlanPage() {
           </div>
 
           {/* Progress Stats */}
-          <div className="flex items-center justify-between text-xs mb-8" style={{ color: "#9CA3AF" }}>
-            <span>{Math.round(progress)}%</span>
-            <span>~{remaining}s remaining</span>
+          <div className="text-center text-xs mb-8" style={{ color: "#9CA3AF" }}>
+            <span>{Math.round(progress)}% complete</span>
           </div>
 
           {/* Step Checklist */}
