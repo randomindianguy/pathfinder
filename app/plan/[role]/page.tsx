@@ -1,8 +1,9 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { useParams, useRouter, useSearchParams } from "next/navigation";
 import posthog from "posthog-js";
+import html2pdf from "html2pdf.js";
 import {
   ArrowLeft,
   Compass,
@@ -11,6 +12,7 @@ import {
   AlertTriangle,
   Loader2,
   Check,
+  Download,
 } from "lucide-react";
 import { GeneratedPlan, PlannedCourse } from "@/lib/types";
 
@@ -115,6 +117,25 @@ export default function PlanPage() {
   const [error, setError] = useState<string | null>(null);
   const [loadingStep, setLoadingStep] = useState(0);
   const [progress, setProgress] = useState(0);
+  const planRef = useRef<HTMLDivElement>(null);
+
+  const handleExport = () => {
+    if (!planRef.current) return;
+
+    posthog.capture("plan_exported", { role: roleId });
+
+    const element = planRef.current;
+    html2pdf()
+      .set({
+        margin: 0.5,
+        filename: `MEM_Pathfinder_${roleId}_plan.pdf`,
+        image: { type: "jpeg", quality: 0.98 },
+        html2canvas: { scale: 2 },
+        jsPDF: { unit: "in", format: "letter", orientation: "portrait" },
+      })
+      .from(element)
+      .save();
+  };
 
   useEffect(() => {
     const stepInterval = setInterval(() => {
@@ -245,13 +266,26 @@ export default function PlanPage() {
       {/* Header */}
       <div style={{ background: "#000" }} className="text-white">
         <div className="max-w-6xl mx-auto px-6 py-8">
-          <button
-            onClick={() => router.push("/")}
-            className="flex items-center gap-2 text-sm mb-4 transition-colors"
-            style={{ color: "#9CA3AF" }}
-          >
-            <ArrowLeft size={16} /> Choose a different role
-          </button>
+          <div className="flex items-center justify-between mb-4">
+            <button
+              onClick={() => router.push("/")}
+              className="flex items-center gap-2 text-sm transition-colors"
+              style={{ color: "#9CA3AF" }}
+            >
+              <ArrowLeft size={16} /> Choose a different role
+            </button>
+            <button
+              onClick={handleExport}
+              className="flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all hover:opacity-90"
+              style={{
+                background: "#000",
+                color: "#CFB991",
+                border: "1px solid #CFB991"
+              }}
+            >
+              <Download size={16} /> Export Plan
+            </button>
+          </div>
           <div className="flex items-center gap-3 mb-2">
             <Compass size={24} style={{ color: "#CFB991" }} />
             <span style={{ color: "#CFB991" }} className="text-xs font-semibold uppercase tracking-wide">
@@ -267,63 +301,88 @@ export default function PlanPage() {
         </div>
       </div>
 
-      {/* Info Banner */}
-      <div className="max-w-6xl mx-auto px-6 pt-6">
-        <div className="rounded-lg p-3 flex items-start gap-2" style={{ background: "#EBF5FF", border: "1px solid #BFDBFE" }}>
-          <Compass size={14} className="shrink-0 mt-0.5" style={{ color: "#1E40AF" }} />
-          <p className="text-xs leading-relaxed" style={{ color: "#1E3A8A" }}>
-            <strong>This is one possible plan.</strong> There are many valid paths to {role.title}. Use this as a starting point for your advisor conversation.
-          </p>
-        </div>
-      </div>
-
-      {/* Credit Summary */}
-      <div className="max-w-6xl mx-auto px-6 py-6">
-        <div className="bg-white rounded-xl border border-gray-200 p-5">
-          <div className="flex items-center gap-2 mb-4">
-            <GraduationCap size={18} style={{ color: "#6B7280" }} />
-            <h3 className="font-semibold text-sm">Credit Requirements</h3>
-            {credit_summary.engineering_depth.discipline && (
-              <span className="ml-auto text-xs" style={{ color: "#6B7280" }}>
-                Depth discipline: <strong>{credit_summary.engineering_depth.discipline}</strong>
-              </span>
-            )}
-          </div>
-          <div className="space-y-2.5">
-            <CreditBar label="Systems" required={credit_summary.systems.required} fulfilled={credit_summary.systems.fulfilled} colorKey="systems" />
-            <CreditBar label="Eng Depth" required={credit_summary.engineering_depth.required} fulfilled={credit_summary.engineering_depth.fulfilled} colorKey="engineering_depth" />
-            <CreditBar label="Prof Skills" required={credit_summary.professional_skills.required} fulfilled={credit_summary.professional_skills.fulfilled} colorKey="professional_skills" />
-            <CreditBar label="Elective" required={credit_summary.elective.required} fulfilled={credit_summary.elective.fulfilled} colorKey="elective" />
+      {/* PDF Export Content */}
+      <div ref={planRef}>
+        {/* Role Title for PDF */}
+        <div className="bg-white px-6 pt-8 pb-4">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-2xl font-bold mb-1" style={{ fontFamily: "'DM Serif Display', Georgia, serif" }}>
+              {role.title} — Course Plan
+            </h2>
+            <p className="text-sm" style={{ color: "#6B7280" }}>
+              Fall 2026 → Spring 2027 → Fall 2027 · 30 credits · 10 courses
+            </p>
           </div>
         </div>
-      </div>
 
-      {/* 3-Column Semester Layout */}
-      <div className="max-w-6xl mx-auto px-6 pb-16">
-        <div className="rounded-lg p-3 mb-6 flex items-start gap-2" style={{ background: "#FEF3C7", border: "1px solid #FDE68A" }}>
-          <AlertTriangle size={14} className="shrink-0 mt-0.5" style={{ color: "#B45309" }} />
-          <p className="text-xs leading-relaxed" style={{ color: "#92400E" }}>
-            <strong>Heads up:</strong> This plan recommends courses, not professors. Always check professor ratings and reviews on BoilerClasses before registering.
-          </p>
+        {/* Info Banner */}
+        <div className="max-w-6xl mx-auto px-6 pt-6">
+          <div className="rounded-lg p-3 flex items-start gap-2" style={{ background: "#EBF5FF", border: "1px solid #BFDBFE" }}>
+            <Compass size={14} className="shrink-0 mt-0.5" style={{ color: "#1E40AF" }} />
+            <p className="text-xs leading-relaxed" style={{ color: "#1E3A8A" }}>
+              <strong>This is one possible plan.</strong> There are many valid paths to {role.title}. Use this as a starting point for your advisor conversation.
+            </p>
+          </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {semesters.map((sem) => (
-            <div key={sem.semester}>
-              <div className="flex items-center justify-between mb-3">
-                <h3 className="font-bold text-lg" style={{ fontFamily: "'DM Serif Display', Georgia, serif" }}>
-                  {sem.semester}
-                </h3>
-                <span className="text-xs font-medium px-2.5 py-1 rounded-full" style={{ color: "#6B7280", background: "#F3F4F6" }}>
-                  {sem.total_credits} credits
+
+        {/* Credit Summary */}
+        <div className="max-w-6xl mx-auto px-6 py-6">
+          <div className="bg-white rounded-xl border border-gray-200 p-5">
+            <div className="flex items-center gap-2 mb-4">
+              <GraduationCap size={18} style={{ color: "#6B7280" }} />
+              <h3 className="font-semibold text-sm">Credit Requirements</h3>
+              {credit_summary.engineering_depth.discipline && (
+                <span className="ml-auto text-xs" style={{ color: "#6B7280" }}>
+                  Depth discipline: <strong>{credit_summary.engineering_depth.discipline}</strong>
                 </span>
-              </div>
-              <div className="space-y-3">
-                {sem.courses.map((course) => (
-                  <CourseCard key={course.code} course={course} roleId={roleId} />
-                ))}
-              </div>
+              )}
             </div>
-          ))}
+            <div className="space-y-2.5">
+              <CreditBar label="Systems" required={credit_summary.systems.required} fulfilled={credit_summary.systems.fulfilled} colorKey="systems" />
+              <CreditBar label="Eng Depth" required={credit_summary.engineering_depth.required} fulfilled={credit_summary.engineering_depth.fulfilled} colorKey="engineering_depth" />
+              <CreditBar label="Prof Skills" required={credit_summary.professional_skills.required} fulfilled={credit_summary.professional_skills.fulfilled} colorKey="professional_skills" />
+              <CreditBar label="Elective" required={credit_summary.elective.required} fulfilled={credit_summary.elective.fulfilled} colorKey="elective" />
+            </div>
+          </div>
+        </div>
+
+        {/* 3-Column Semester Layout */}
+        <div className="max-w-6xl mx-auto px-6 pb-6">
+          <div className="rounded-lg p-3 mb-6 flex items-start gap-2" style={{ background: "#FEF3C7", border: "1px solid #FDE68A" }}>
+            <AlertTriangle size={14} className="shrink-0 mt-0.5" style={{ color: "#B45309" }} />
+            <p className="text-xs leading-relaxed" style={{ color: "#92400E" }}>
+              <strong>Heads up:</strong> This plan recommends courses, not professors. Always check professor ratings and reviews on BoilerClasses before registering.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {semesters.map((sem) => (
+              <div key={sem.semester}>
+                <div className="flex items-center justify-between mb-3">
+                  <h3 className="font-bold text-lg" style={{ fontFamily: "'DM Serif Display', Georgia, serif" }}>
+                    {sem.semester}
+                  </h3>
+                  <span className="text-xs font-medium px-2.5 py-1 rounded-full" style={{ color: "#6B7280", background: "#F3F4F6" }}>
+                    {sem.total_credits} credits
+                  </span>
+                </div>
+                <div className="space-y-3">
+                  {sem.courses.map((course) => (
+                    <CourseCard key={course.code} course={course} roleId={roleId} />
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* PDF Footer */}
+        <div className="bg-white px-6 py-4 border-t border-gray-200">
+          <div className="max-w-6xl mx-auto text-center">
+            <p className="text-xs font-medium mb-1">Generated by MEM Pathfinder</p>
+            <p className="text-[10px]" style={{ color: "#6B7280" }}>
+              https://mem-pathfinder.vercel.app
+            </p>
+          </div>
         </div>
       </div>
 
